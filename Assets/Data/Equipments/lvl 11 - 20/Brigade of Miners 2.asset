@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Brigade of Miners 2
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: dea9cc3f-ffbe-4f8e-a2aa-f60f764b2c41
+    _serializedGuid: c4e712ab-6cdf-4a9a-8758-7ad03a296092
   Unlocked: 1
   RequirementGroups: []
   Cost:
@@ -22,4 +22,3 @@ MonoBehaviour:
   YieldAmount:
     Currency: {fileID: 11400000, guid: a0eaf6f8e25cf47e78246e64e59f3eba, type: 2}
     Amount: 0.3
-  BuildingType: 0

@@ -6,7 +6,7 @@ using UnityEngine;
 
 [CreateAssetMenu(menuName = "uClicker/BuildingProgressive")]
 [Serializable]
-public class BuildingProgresive : ClickerComponent
+public class BuildingProgresive : ScriptableObject
 {
     public int CountBuildings;
     public Building[] Miners;
@@ -22,6 +22,7 @@ public class BuildingProgresive : ClickerComponent
     {
         ABP = new Dictionary<BuildingType, Building[]>();
         ABP.Add(BuildingType.Miner, Miners);
+        Debug.Log(Miners);
         ABP.Add(BuildingType.Transport, Carts);
         ABP.Add(BuildingType.Factory, Factories);
         ABP.Add(BuildingType.Drill, Drills);

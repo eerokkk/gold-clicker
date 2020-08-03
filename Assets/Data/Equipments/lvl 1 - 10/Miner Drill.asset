@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Miner Drill
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: b43a256b-7bc0-420c-9f49-963faa552948
+    _serializedGuid: b4ab07b3-cf5f-4bbe-b2fc-9f48e7f735c9
   Unlocked: 1
   RequirementGroups: []
   Cost:
@@ -22,4 +22,3 @@ MonoBehaviour:
   YieldAmount:
     Currency: {fileID: 11400000, guid: a0eaf6f8e25cf47e78246e64e59f3eba, type: 2}
     Amount: 10
-  BuildingType: 3

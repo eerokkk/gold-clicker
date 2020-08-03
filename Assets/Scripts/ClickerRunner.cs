@@ -13,6 +13,7 @@ public class ClickerRunner : MonoBehaviour
         while (Application.isPlaying)
         {
             yield return new WaitForSecondsRealtime(1);
+            Debug.Log("tik");
             Manager.Tick();
             Manager.SaveProgress();
             PlayerPrefs.Save();

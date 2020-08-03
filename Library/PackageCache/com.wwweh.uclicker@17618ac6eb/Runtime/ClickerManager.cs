@@ -85,8 +85,10 @@ namespace uClicker
 
         public void BuildingChanger()
         {
+            Debug.Log(State.BuildingCountType);
             foreach (var b in State.BuildingCountType)
             {
+                Debug.Log(b);
                 var lvl = (int)Math.Truncate((decimal)(b.Value) / Progresive.CountBuildings);
                 var build = Config.AvailableBuildings.First(x => x.BuildingType == b.Key);
                 var currentUpg = Progresive.ABP.First(x => x.Key == b.Key).Value[lvl];
@@ -123,10 +125,11 @@ namespace uClicker
                 State.BuildingCountType[building.BuildingType] = State.BuildingCountType[building.BuildingType]+1;
             else
                 State.StartBuildingCount();
-            //Debug.Log($"Buy building type : {building.BuildingType} \r\n BuildingCountType : {State.BuildingCountType[building.BuildingType]}");
+            Debug.Log($"Buy building type : {building.BuildingType} \r\n BuildingCountType : {State.BuildingCountType[building.BuildingType]}");
             foreach (var item in State.BuildingCountType)
             {
-               // Debug.Log(item);
+                Debug.Log(item);
+                
             }
             BuildingChanger();
 

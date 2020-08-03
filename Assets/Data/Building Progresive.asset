@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 503aec7f6e89dd946b5200be8d304799, type: 3}
+  m_Name: Building Progresive
+  m_EditorClassIdentifier: 
+  GUIDContainer:
+    _serializedGuid: e6068045-1cd8-471a-9a79-1f5be0a0d832
+  CountBuildings: 20
+  Miners:
+  - {fileID: 11400000, guid: 334dafe90f2dd4b118bfccbe0dba4fda, type: 2}
+  - {fileID: 11400000, guid: 44a3de177c5409449a586c00c24d8a82, type: 2}
+  - {fileID: 11400000, guid: 9edd4f942fdcad848ad166cb6eea6bca, type: 2}
+  Carts:
+  - {fileID: 11400000, guid: f24d7d7d04ffdb3409a09779aff7e9f0, type: 2}
+  - {fileID: 11400000, guid: 380f75529b8d18243bd7ae086aa2830a, type: 2}
+  Factories:
+  - {fileID: 11400000, guid: 2a723533c3a87ab4fb6b7f459aa6f160, type: 2}
+  - {fileID: 11400000, guid: c31ed9444bb0b8f46be650f4794e0df0, type: 2}
+  Drills:
+  - {fileID: 11400000, guid: f7a6466584e4e0a489b8483e1357fd3e, type: 2}
+  - {fileID: 11400000, guid: 5fdd815ee4b52744d9a2a7fe5ce6e5e2, type: 2}
+  Cities:
+  - {fileID: 11400000, guid: feb40d80187a36a42912de56cef2d7fa, type: 2}
+  - {fileID: 11400000, guid: 45200bc908d7c9b4fafe82c04b28e3f1, type: 2}
+  Mines:
+  - {fileID: 11400000, guid: e82620386352247439215ae3586cbc5f, type: 2}
+  - {fileID: 11400000, guid: 2807a0abecbf46245a18d02253a8cf15, type: 2}

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: cities2
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: 01d041a6-0b56-4e5d-9f1c-cf9e6b2b3c4d
+    _serializedGuid: 0ed01af1-940e-43b2-9e33-de11e29a597a
   Unlocked: 1
   RequirementGroups:
   - GroupOperand: 0

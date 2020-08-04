@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Gold Mine
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: 25452840-b281-402f-a9f8-9df2ba90a361
+    _serializedGuid: 9c9d32dd-b529-4126-9fca-88ad50d68dd6
   Unlocked: 1
   RequirementGroups: []
   Cost:

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: facvt2
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: 14c88d43-a218-4cf7-b68a-671012cc332e
+    _serializedGuid: 48c3a08c-3bae-4423-9b47-1763b8f20400
   Unlocked: 1
   RequirementGroups:
   - GroupOperand: 0
@@ -24,3 +24,4 @@ MonoBehaviour:
   YieldAmount:
     Currency: {fileID: 11400000, guid: a0eaf6f8e25cf47e78246e64e59f3eba, type: 2}
     Amount: 0.3
+  BuildingType: 0

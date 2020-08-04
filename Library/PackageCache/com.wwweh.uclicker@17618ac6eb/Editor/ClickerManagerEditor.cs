@@ -68,6 +68,10 @@ namespace Clicker.Editor
                 manager.Config.AvailableBuildings[4] = manager.Progresive.Cities[0];
                 manager.Config.AvailableBuildings[5] = manager.Progresive.Mines[0];
 
+                
+                //manager.State.Currancies.Add(manager.Config.Currancies[1]);
+                //manager.State.Currancies.Add(manager.Config.Currancies[2]);
+
             }
 
             if (GUILayout.Button("Save"))

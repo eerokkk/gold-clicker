@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Cart
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: 9b19d6d2-9b89-42e7-a082-d97aa12a29b2
+    _serializedGuid: e10d1f11-3220-45b4-8293-8edd9e0e9551
   Unlocked: 1
   RequirementGroups: []
   Cost:
@@ -22,3 +22,4 @@ MonoBehaviour:
   YieldAmount:
     Currency: {fileID: 11400000, guid: a0eaf6f8e25cf47e78246e64e59f3eba, type: 2}
     Amount: 0.5
+  BuildingType: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GoldManager
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: 82c4ea11-cbda-4adc-9261-c5868d116d9c
+    _serializedGuid: a5418e8e-aaab-4aee-8da0-a7706bb489a9
   SaveSettings:
     SaveType: 0
     SaveName: save
@@ -21,10 +21,12 @@ MonoBehaviour:
   Config:
     Currencies:
     - {fileID: 11400000, guid: a0eaf6f8e25cf47e78246e64e59f3eba, type: 2}
+    - {fileID: 11400000, guid: a1914c6b0e4ea0f46b506c7b0995bb1c, type: 2}
+    - {fileID: 11400000, guid: 3e3e773e1d255ce4684049d674786b51, type: 2}
     Clickables:
     - {fileID: 11400000, guid: 548a7f6b6abf7df449ce337d26c47358, type: 2}
     AvailableBuildings:
-    - {fileID: 11400000, guid: 44a3de177c5409449a586c00c24d8a82, type: 2}
+    - {fileID: 11400000, guid: 334dafe90f2dd4b118bfccbe0dba4fda, type: 2}
     - {fileID: 11400000, guid: f24d7d7d04ffdb3409a09779aff7e9f0, type: 2}
     - {fileID: 11400000, guid: 2a723533c3a87ab4fb6b7f459aa6f160, type: 2}
     - {fileID: 11400000, guid: f7a6466584e4e0a489b8483e1357fd3e, type: 2}
@@ -37,9 +39,18 @@ MonoBehaviour:
     _earnedBuildings: []
     _earnedBuildingsCount: 
     _earnedUpgrades: []
-    _currencies: []
-    _currencyCurrentTotals: []
-    _currencyHistoricalTotals: []
+    _currencies:
+    - _serializedGuid: 0bdee199-7265-4610-a236-4a55657739c1
+    - _serializedGuid: df3f749b-a1c1-4de2-b17a-bd361024cab9
+    - _serializedGuid: 615a1415-8656-4fdd-8a05-f76ea6b44b77
+    _currencyCurrentTotals:
+    - 0
+    - 0
+    - 0
+    _currencyHistoricalTotals:
+    - 2117671
+    - 0
+    - 0
   Progresive: {fileID: 11400000, guid: c3a0bf358d0109d42a76db9f37e01166, type: 2}
   OnTick:
     m_PersistentCalls:

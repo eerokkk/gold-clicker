@@ -298,6 +298,7 @@ namespace uClicker
 
             ApplyBuildingPerks(currency, ref amount);
             ApplyCurrencyPerk(currency, ref amount);
+            amount += amount * 1f * State.CurrencyCurrentTotals[Config.Currencies[1]];
             return amount;
         }
 

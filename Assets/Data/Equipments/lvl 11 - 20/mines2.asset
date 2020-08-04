@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: mines2
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: cb1720a4-b0a0-4c37-bf79-0496d667698f
+    _serializedGuid: 1a0f2a0e-0624-4a69-b425-aca127bdb263
   Unlocked: 0
   RequirementGroups:
   - GroupOperand: 0
@@ -24,3 +24,4 @@ MonoBehaviour:
   YieldAmount:
     Currency: {fileID: 11400000, guid: a0eaf6f8e25cf47e78246e64e59f3eba, type: 2}
     Amount: 0.3
+  BuildingType: 0

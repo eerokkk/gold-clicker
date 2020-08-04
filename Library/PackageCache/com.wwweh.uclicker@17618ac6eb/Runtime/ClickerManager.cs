@@ -305,7 +305,7 @@ namespace uClicker
                 {
                     return amount;
                 }
-                return amount+= amount * 1f * State.CurrencyCurrentTotals[Config.Currencies[1]];
+                return amount+= amount * 0.01f * State.CurrencyCurrentTotals[Config.Currencies[1]];
             }
 
             return 0;

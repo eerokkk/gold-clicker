@@ -51,7 +51,7 @@ namespace uClicker
 
         public void Click(Clickable clickable)
         {
-            float amount = clickable.Amount;
+            double amount = clickable.Amount;
             Currency currency = clickable.Currency;
 
             ApplyClickPerks(clickable, ref amount);
@@ -72,7 +72,7 @@ namespace uClicker
             bool updated = false;
             foreach (Currency currency in Config.Currencies)
             {
-                float amount = PerSecondAmount(currency);
+                double amount = PerSecondAmount(currency);
 
                 updated = UpdateTotal(currency, amount);
             }
@@ -189,7 +189,7 @@ namespace uClicker
                 return true;
             }
 
-            float amount;
+            double amount;
             State.CurrencyCurrentTotals.TryGetValue(cost.Currency, out amount);
             return amount >= cost.Amount;
         }
@@ -260,7 +260,7 @@ namespace uClicker
 
         #region Internal Logic
 
-        private bool Deduct(Currency costCurrency, float cost)
+        private bool Deduct(Currency costCurrency, double cost)
         {
             //Debug.Log(costCurrency);
             if (State.CurrencyCurrentTotals[costCurrency] < cost)
@@ -277,16 +277,16 @@ namespace uClicker
             return true;
         }
 
-        private bool UpdateTotal(Currency currency, float amount)
+        private bool UpdateTotal(Currency currency, double amount)
         {
-            float total;
+            double total;
             State.CurrencyCurrentTotals.TryGetValue(currency, out total);
             total += amount;
             State.CurrencyCurrentTotals[currency] = total;
 
             if (amount > 0 || currency.name != "Gold")
             {
-                float historicalTotal;
+                double historicalTotal;
                 State.CurrencyHistoricalTotals.TryGetValue(currency, out historicalTotal);
                 State.CurrencyHistoricalTotals[currency] = historicalTotal + amount;
             }
@@ -294,11 +294,11 @@ namespace uClicker
             return true;
         }
 
-        private float PerSecondAmount(Currency currency)
+        private double PerSecondAmount(Currency currency)
         {
             if (currency.name == "Gold")
             {
-                float amount = 0;
+                double amount = 0;
 
                 ApplyBuildingPerks(currency, ref amount);
                 ApplyCurrencyPerk(currency, ref amount);
@@ -392,7 +392,7 @@ namespace uClicker
             return groupsUnlocked;
         }
 
-        private void ApplyClickPerks(Clickable clickable, ref float amount)
+        private void ApplyClickPerks(Clickable clickable, ref double amount)
         {
             foreach (Upgrade upgrade in State.EarnedUpgrades)
             {
@@ -416,7 +416,7 @@ namespace uClicker
             }
         }
 
-        private void ApplyBuildingPerks(Currency currency, ref float amount)
+        private void ApplyBuildingPerks(Currency currency, ref double amount)
         {
             foreach (KeyValuePair<Building, int> kvp in State.EarnedBuildings)
             {
@@ -452,7 +452,7 @@ namespace uClicker
             }
         }
 
-        private void ApplyCurrencyPerk(Currency currency, ref float amount)
+        private void ApplyCurrencyPerk(Currency currency, ref double amount)
         {
             foreach (Upgrade upgrade in State.EarnedUpgrades)
             {

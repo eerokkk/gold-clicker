@@ -10,8 +10,8 @@ namespace uClicker
     {
         [NonSerialized] public Dictionary<Building, int> EarnedBuildings = new Dictionary<Building, int>();
         [NonSerialized] public List<Upgrade> EarnedUpgrades = new List<Upgrade>();
-        [NonSerialized] public Dictionary<Currency, float> CurrencyCurrentTotals = new Dictionary<Currency, float>();
-        [NonSerialized] public Dictionary<Currency, float> CurrencyHistoricalTotals = new Dictionary<Currency, float>();
+        [NonSerialized] public Dictionary<Currency, double> CurrencyCurrentTotals = new Dictionary<Currency, double>();
+        [NonSerialized] public Dictionary<Currency, double> CurrencyHistoricalTotals = new Dictionary<Currency, double>();
         public Dictionary<BuildingType, int> BuildingCountType = new Dictionary<BuildingType, int>();
 
 
@@ -19,8 +19,8 @@ namespace uClicker
         [SerializeField] private List<int> _earnedBuildingsCount = new List<int>();
         [SerializeField] private List<GUIDContainer> _earnedUpgrades = new List<GUIDContainer>();
         [SerializeField] private List<GUIDContainer> _currencies = new List<GUIDContainer>();
-        [SerializeField] private List<float> _currencyCurrentTotals = new List<float>();
-        [SerializeField] private List<float> _currencyHistoricalTotals = new List<float>();
+        [SerializeField] private List<double> _currencyCurrentTotals = new List<double>();
+        [SerializeField] private List<double> _currencyHistoricalTotals = new List<double>();
 
         public void StartBuildingCount()
         {
@@ -49,11 +49,11 @@ namespace uClicker
             _currencies.Clear();
             _currencyCurrentTotals.Clear();
             _currencyHistoricalTotals.Clear();
-            foreach (KeyValuePair<Currency, float> kvp in CurrencyCurrentTotals)
+            foreach (KeyValuePair<Currency, double> kvp in CurrencyCurrentTotals)
             {
                 _currencies.Add(kvp.Key.GUIDContainer);
                 _currencyCurrentTotals.Add(kvp.Value);
-                float historicalTotal;
+                double historicalTotal;
                 CurrencyHistoricalTotals.TryGetValue(kvp.Key, out historicalTotal);
                 _currencyHistoricalTotals.Add(historicalTotal);
             }

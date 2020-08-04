@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using uClicker;
@@ -22,7 +23,7 @@ public class ResetProgress : MonoBehaviour
             availableUpgrade.Unlocked = false;
         }
 
-        var sumUran = Mathf.Round(manager.State.CurrencyCurrentTotals[manager.Config.Currencies[0]] / 1000000);
+        var sumUran = Math.Round(manager.State.CurrencyCurrentTotals[manager.Config.Currencies[0]] / 1000000f);
         manager.State.CurrencyCurrentTotals[manager.Config.Currencies[1]] += sumUran;
         manager.State.CurrencyCurrentTotals[manager.Config.Currencies[0]] = 0;
         manager.State.BuildingCountType.Clear();

@@ -10,11 +10,12 @@ public class SwitchFieldUpgrades : MonoBehaviour
     public GameObject FieldUpgrades;
     public TextMeshProUGUI MultiplyText;
     public ClickerManager GoldManager;
+    public int BuyMultiply;
 
     [SerializeField]
     private bool Activity = true;
     private int Count = 1;
-    private int BuyMultiply;
+    
 
 public void switchFieldEquipment()
     {

@@ -57,7 +57,7 @@ namespace uClicker
             ApplyClickPerks(clickable, ref amount);
             ApplyCurrencyPerk(currency, ref amount);
 
-            amount += amount * 0.01f * State.CurrencyCurrentTotals[Config.Currencies[1]];
+            amount += amount * State.PercentUranus * State.CurrencyCurrentTotals[Config.Currencies[1]];
             bool updated = UpdateTotal(currency, amount);
             UpdateUnlocks();
             if (updated)
@@ -124,8 +124,8 @@ namespace uClicker
             State.EarnedBuildings.TryGetValue(building, out buildingCount);
             State.EarnedBuildings[building] = buildingCount + 1;
             if (State.BuildingCountType.ContainsKey(building.BuildingType))
-                State.BuildingCountType[building.BuildingType] = State.BuildingCountType[building.BuildingType]+1;
-            else
+                State.BuildingCountType[building.BuildingType] = State.BuildingCountType[building.BuildingType] + 1;
+            else;
                 State.StartBuildingCount();
             Debug.Log($"Buy building type : {building.BuildingType} \r\n BuildingCountType : {State.BuildingCountType[building.BuildingType]}");
             foreach (var item in State.BuildingCountType)
@@ -306,7 +306,7 @@ namespace uClicker
                 {
                     return amount;
                 }
-                return amount+= amount * 0.01f * State.CurrencyCurrentTotals[Config.Currencies[1]];
+                return amount+= amount * State.PercentUranus * State.CurrencyCurrentTotals[Config.Currencies[1]];
             }
 
             return 0;

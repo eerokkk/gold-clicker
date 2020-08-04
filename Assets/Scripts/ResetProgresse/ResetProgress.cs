@@ -23,7 +23,7 @@ public class ResetProgress : MonoBehaviour
             availableUpgrade.Unlocked = false;
         }
 
-        var sumUran = Math.Round(manager.State.CurrencyCurrentTotals[manager.Config.Currencies[0]] / 1000000f);
+        var sumUran = Math.Round(manager.State.CurrencyCurrentTotals[manager.Config.Currencies[0]] / 1000000d);
         manager.State.CurrencyCurrentTotals[manager.Config.Currencies[1]] += sumUran;
         manager.State.CurrencyCurrentTotals[manager.Config.Currencies[0]] = 0;
         manager.State.BuildingCountType.Clear();
@@ -35,7 +35,7 @@ public class ResetProgress : MonoBehaviour
         manager.Config.AvailableBuildings[4] = manager.Progresive.Cities[0];
         manager.Config.AvailableBuildings[5] = manager.Progresive.Mines[0];
 
-
+        manager.State.PercentUranus = 0.01d;
 
     }
 

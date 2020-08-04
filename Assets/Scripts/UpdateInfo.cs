@@ -25,7 +25,7 @@ public class UpdateInfo : MonoBehaviour
 
     private void OnTick()
     {
-        Debug.Log(Manager.State.CurrencyCurrentTotals);
+        //Debug.Log(Manager.State.CurrencyCurrentTotals);
         Money.text = string.Join(", ",
             Manager.State.CurrencyCurrentTotals.Select((kvp) =>
                 string.Format("{0}", kvp.Value)).ToArray());

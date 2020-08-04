@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Upgrade
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: 743cd419-85bd-4653-aee1-ccfb5dc017f0
+    _serializedGuid: 3f93c165-f1f7-4914-9a9e-93007aec18ae
   Unlocked: 1
   RequirementGroups: []
   Cost:

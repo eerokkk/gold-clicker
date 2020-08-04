@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Brigade of Miners 2
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: dea9cc3f-ffbe-4f8e-a2aa-f60f764b2c41
+    _serializedGuid: c4e712ab-6cdf-4a9a-8758-7ad03a296092
   Unlocked: 1
   RequirementGroups: []
   Cost:

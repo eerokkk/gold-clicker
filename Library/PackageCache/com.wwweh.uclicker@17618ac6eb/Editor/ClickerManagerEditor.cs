@@ -60,7 +60,6 @@ namespace Clicker.Editor
 
                 manager.State.CurrencyCurrentTotals.Clear();
                 manager.State.BuildingCountType.Clear();
-
                 manager.Config.AvailableBuildings[0] = manager.Progresive.Miners[0];
                 manager.Config.AvailableBuildings[1] = manager.Progresive.Carts[0];
                 manager.Config.AvailableBuildings[2] = manager.Progresive.Factories[0];

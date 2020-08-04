@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Equipment
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: 1b42b2bd-94b6-4380-baf6-fec51f80e189
+    _serializedGuid: bfd09885-994e-421b-be85-45dff841d504
   Unlocked: 0
   RequirementGroups: []
   Cost:
-    Currency: {fileID: 11400000, guid: 26016220fc8f0674c918945d7fe06912, type: 2}
+    Currency: {fileID: 0}
     Amount: 20
   YieldAmount:
-    Currency: {fileID: 11400000, guid: 26016220fc8f0674c918945d7fe06912, type: 2}
+    Currency: {fileID: 0}
     Amount: 1
   BuildingType: 0

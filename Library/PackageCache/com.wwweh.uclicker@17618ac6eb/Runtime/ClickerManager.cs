@@ -77,6 +77,7 @@ namespace uClicker
             }
 
             UpdateUnlocks();
+
             if (updated)
             {
                 OnTick.Invoke();
@@ -282,24 +283,32 @@ namespace uClicker
             total += amount;
             State.CurrencyCurrentTotals[currency] = total;
 
-            if (amount > 0)
+            if (amount > 0 || currency.name != "Gold")
             {
                 float historicalTotal;
                 State.CurrencyHistoricalTotals.TryGetValue(currency, out historicalTotal);
                 State.CurrencyHistoricalTotals[currency] = historicalTotal + amount;
             }
 
-            return total != 0;
+            return true;
         }
 
         private float PerSecondAmount(Currency currency)
         {
-            float amount = 0;
+            if (currency.name == "Gold")
+            {
+                float amount = 0;
 
-            ApplyBuildingPerks(currency, ref amount);
-            ApplyCurrencyPerk(currency, ref amount);
-            amount += amount * 1f * State.CurrencyCurrentTotals[Config.Currencies[1]];
-            return amount;
+                ApplyBuildingPerks(currency, ref amount);
+                ApplyCurrencyPerk(currency, ref amount);
+                if (State.CurrencyCurrentTotals.Count < 1)
+                {
+                    return amount;
+                }
+                return amount+= amount * 1f * State.CurrencyCurrentTotals[Config.Currencies[1]];
+            }
+
+            return 0;
         }
 
         private void UpdateUnlocks()

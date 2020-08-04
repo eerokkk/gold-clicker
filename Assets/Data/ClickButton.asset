@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: ClickButton
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: 2e0981fd-0569-4435-82af-a005d83e4ae1
+    _serializedGuid: 5309a16a-e579-4d05-8e48-6840d71009cb
   Currency: {fileID: 11400000, guid: a0eaf6f8e25cf47e78246e64e59f3eba, type: 2}
   Amount: 1000000

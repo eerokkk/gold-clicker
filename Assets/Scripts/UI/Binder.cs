@@ -40,7 +40,7 @@ public class Binder : MonoBehaviour
 
     public void Bind(Building availableBuilding)
     {
-        Debug.Log(availableBuilding);
+        //Debug.Log(availableBuilding);
         _clickerComponent = availableBuilding;
         this.Name.text = availableBuilding.name;
         this.Cost.text = _clickerManager.BuildingCost(availableBuilding).ToString();

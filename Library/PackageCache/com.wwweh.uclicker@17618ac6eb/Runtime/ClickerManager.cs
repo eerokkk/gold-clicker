@@ -57,6 +57,7 @@ namespace uClicker
             ApplyClickPerks(clickable, ref amount);
             ApplyCurrencyPerk(currency, ref amount);
 
+            amount += amount * 0.01f * State.CurrencyCurrentTotals[Config.Currencies[1]];
             bool updated = UpdateTotal(currency, amount);
             UpdateUnlocks();
             if (updated)

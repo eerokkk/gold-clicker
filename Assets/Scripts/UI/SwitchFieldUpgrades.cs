@@ -14,6 +14,7 @@ public class SwitchFieldUpgrades : MonoBehaviour
     public int BuyMultiply;
     public Animator Animator;
 
+
     [SerializeField]
     private bool Activity = true;
     private int Count = 1;
@@ -77,11 +78,13 @@ public void switchFieldUpgrades()
     public void OnClickSettingsButton()
     {
         Animator.SetBool("IsOpen", true);
+
     }
 
     public void OnClickBackButtonIsSettingsPanel()
     {
         Animator.SetBool("IsOpen", false);
+
     }
 }
 

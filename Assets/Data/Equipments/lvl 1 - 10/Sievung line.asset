@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sievung line
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: be54cecf-a74f-4a4b-b81e-883c7aacb365
+    _serializedGuid: 0316efc3-a18b-41ff-aad9-4a2582718c7e
   Unlocked: 1
   RequirementGroups: []
   Cost:

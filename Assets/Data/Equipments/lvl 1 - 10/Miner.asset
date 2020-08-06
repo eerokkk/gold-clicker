@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Miner
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: a91c2988-4a51-4ce1-8c7a-0e96391c86d3
+    _serializedGuid: e296f0e0-70d7-40b3-99ad-c3cb90b6b5ee
   Unlocked: 1
   RequirementGroups: []
   Cost:
@@ -21,5 +21,5 @@ MonoBehaviour:
     Amount: 15
   YieldAmount:
     Currency: {fileID: 11400000, guid: a0eaf6f8e25cf47e78246e64e59f3eba, type: 2}
-    Amount: 0.1
+    Amount: 0.10000000149011612
   BuildingType: 0

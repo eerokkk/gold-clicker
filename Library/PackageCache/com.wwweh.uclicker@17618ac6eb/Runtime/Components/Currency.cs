@@ -14,7 +14,7 @@ namespace uClicker
     public struct CurrencyTuple
     {
         public Currency Currency;
-        public float Amount;
+        public double Amount;
 
         public override string ToString()
         {

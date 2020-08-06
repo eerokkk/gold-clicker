@@ -195,31 +195,20 @@ namespace uClicker
        
         public CurrencyTuple BuildingCost(Building building)
         {
-            //Debug.Log(building.BuildingType);
             int count;
             if (!State.EarnedBuildings.TryGetValue(building, out count))
             {
                 count = 0;
             }
-            //CurrencyTuple currencyTuple = building.Cost;
             CurrencyTuple currencyTuple = new CurrencyTuple();
             currencyTuple.Amount = building.Cost.Amount;
             currencyTuple.Currency = building.Cost.Currency;
-            float summ = 0;
-
+            double summ = 0;
             
             for (int i = 1; i <= BuyMultiply; i++)
             {
-                currencyTuple.Amount = (int)currencyTuple.Amount * Mathf.Pow(1 + Config.BuildingCostIncrease, count + i);
+                currencyTuple.Amount = currencyTuple.Amount * Math.Pow(1 + Config.BuildingCostIncrease, count + i);
                 summ += currencyTuple.Amount;
-
-
-                if (building.BuildingType == BuildingType.Miner )
-                {
-                    Debug.Log($"count ======= {count}");
-
-                }
-
             }
 
             currencyTuple.Amount = summ;

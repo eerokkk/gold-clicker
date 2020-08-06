@@ -12,24 +12,21 @@ public class SwitchFieldUpgrades : MonoBehaviour
     public TextMeshProUGUI MultiplyText;
     public ClickerManager GoldManager;
 <<<<<<< HEAD
-=======
     public int BuyMultiply;
     public Animator Animator;
 
->>>>>>> remotes/origin/gavno
+=======
+>>>>>>> e3b82bd4c6abab04a8584a02306daba73caf12ae
 
     [SerializeField]
     private bool Activity = true;
     private int Count = 1;
 
-<<<<<<< HEAD
     public void Start()
     {
         GoldManager.BuyMultiply = 1;
     }
 
-=======
->>>>>>> remotes/origin/gavno
     public void switchFieldEquipment()
     {
         switch (Activity)

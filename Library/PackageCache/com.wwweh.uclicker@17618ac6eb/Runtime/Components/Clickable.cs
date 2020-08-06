@@ -7,6 +7,6 @@ namespace uClicker
     public class Clickable : ClickerComponent
     {
         public Currency Currency;
-        public float Amount;
+        public double Amount;
     }
 }

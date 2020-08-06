@@ -1,17 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using uClicker;
 using UnityEngine;
 
 public class SwitchFieldUpgrades : MonoBehaviour
 {
     public GameObject FieldEquipment;
     public GameObject FieldUpgrades;
+    public TextMeshProUGUI MultiplyText;
+    public ClickerManager GoldManager;
 
     [SerializeField]
     private bool Activity = true;
+    private int Count = 1;
 
-public void switchFieldEquipment()
+    public void Start()
+    {
+        GoldManager.BuyMultiply = 1;
+    }
+
+    public void switchFieldEquipment()
     {
         switch (Activity)
         {
@@ -37,5 +46,34 @@ public void switchFieldUpgrades()
             case false:
                 break;
         }
+    }
+
+    public void changeTextInMultiplyButton()
+    {
+        switch (Count)
+        {
+            case 0:
+                GoldManager.BuyMultiply = 1;
+                MultiplyText.text = $"x{GoldManager.BuyMultiply}";
+                Count++;
+                break;
+            case 1:
+                GoldManager.BuyMultiply = 10;
+                MultiplyText.text = $"x{GoldManager.BuyMultiply}";
+                Count++;
+                break;
+            case 2:
+                GoldManager.BuyMultiply = 100;
+                MultiplyText.text = $"x{GoldManager.BuyMultiply}";
+                Count++;
+                break;
+            case 3:
+                GoldManager.BuyMultiply = 1000;
+                MultiplyText.text = "Max";
+                Count = 0;
+                break;
+        }
+
+        GoldManager.OnTick.Invoke();
     }
 }

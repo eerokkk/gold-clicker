@@ -15,6 +15,7 @@ namespace uClicker
         public Dictionary<BuildingType, int> BuildingCountType = new Dictionary<BuildingType, int>();
         [SerializeField] public double PercentUranus;
 
+
         [SerializeField] private List<GUIDContainer> _earnedBuildings = new List<GUIDContainer>();
         [SerializeField] private List<int> _earnedBuildingsCount = new List<int>();
         [SerializeField] private List<GUIDContainer> _earnedUpgrades = new List<GUIDContainer>();

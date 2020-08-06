@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -19,6 +20,7 @@ namespace uClicker
         public ManagerConfig Config;
         public ManagerState State;
         public BuildingProgresive Progresive;
+        public int BuyMultiply = 1;
 
         public UnityEvent OnTick;
         public UnityEvent OnBuyUpgrade;
@@ -87,10 +89,10 @@ namespace uClicker
 
         public void BuildingChanger()
         {
-            Debug.Log(State.BuildingCountType);
+           // Debug.Log(State.BuildingCountType);
             foreach (var b in State.BuildingCountType)
             {
-                Debug.Log(b);
+               // Debug.Log(b);
                 var lvl = (int)Math.Truncate((decimal)(b.Value) / Progresive.CountBuildings);
                 var build = Config.AvailableBuildings.First(x => x.BuildingType == b.Key);
                 var currentUpg = Progresive.ABP.First(x => x.Key == b.Key).Value[lvl];
@@ -122,17 +124,13 @@ namespace uClicker
 
             int buildingCount;
             State.EarnedBuildings.TryGetValue(building, out buildingCount);
-            State.EarnedBuildings[building] = buildingCount + 1;
+            State.EarnedBuildings[building] = buildingCount + BuyMultiply;
             if (State.BuildingCountType.ContainsKey(building.BuildingType))
-                State.BuildingCountType[building.BuildingType] = State.BuildingCountType[building.BuildingType] + 1;
+                State.BuildingCountType[building.BuildingType] = State.BuildingCountType[building.BuildingType] + BuyMultiply;
             else;
                 State.StartBuildingCount();
-            Debug.Log($"Buy building type : {building.BuildingType} \r\n BuildingCountType : {State.BuildingCountType[building.BuildingType]}");
-            foreach (var item in State.BuildingCountType)
-            {
-                Debug.Log(item);
-                
-            }
+            //Debug.Log($"Buy building type : {building.BuildingType} \r\n BuildingCountType : {State.BuildingCountType[building.BuildingType]}");
+           
             BuildingChanger();
 
             UpdateUnlocks();
@@ -194,6 +192,7 @@ namespace uClicker
             return amount >= cost.Amount;
         }
 
+       
         public CurrencyTuple BuildingCost(Building building)
         {
             int count;
@@ -201,9 +200,19 @@ namespace uClicker
             {
                 count = 0;
             }
+            CurrencyTuple currencyTuple = new CurrencyTuple();
+            currencyTuple.Amount = building.Cost.Amount;
+            currencyTuple.Currency = building.Cost.Currency;
+            double summ = 0;
+            
+            for (int i = 1; i <= BuyMultiply; i++)
+            {
+                currencyTuple.Amount = currencyTuple.Amount * Math.Pow(1 + Config.BuildingCostIncrease, count + i);
+                summ += currencyTuple.Amount;
+            }
 
-            CurrencyTuple currencyTuple = building.Cost;
-            currencyTuple.Amount = (int) currencyTuple.Amount * Mathf.Pow(1 + Config.BuildingCostIncrease, count);
+            currencyTuple.Amount = summ;
+
             return currencyTuple;
         }
 
@@ -281,6 +290,12 @@ namespace uClicker
         {
             double total;
             State.CurrencyCurrentTotals.TryGetValue(currency, out total);
+
+            if (total != 0 && amount < 0)
+            {
+                Debug.Log($"total = {total}");
+                Debug.Log($"amount = {amount}");
+            }
             total += amount;
             State.CurrencyCurrentTotals[currency] = total;
 

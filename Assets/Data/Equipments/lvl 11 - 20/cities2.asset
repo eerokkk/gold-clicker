@@ -23,5 +23,5 @@ MonoBehaviour:
     Amount: 50
   YieldAmount:
     Currency: {fileID: 11400000, guid: a0eaf6f8e25cf47e78246e64e59f3eba, type: 2}
-    Amount: 0.3
+    Amount: 0.30000001192092896
   BuildingType: 0

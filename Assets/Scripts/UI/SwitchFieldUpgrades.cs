@@ -19,6 +19,8 @@ public class SwitchFieldUpgrades : MonoBehaviour
     private bool Activity = true;
     private int Count = 1;
 
+
+
     public void switchFieldEquipment()
     {
         switch (Activity)

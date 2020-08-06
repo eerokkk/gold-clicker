@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -19,6 +20,7 @@ namespace uClicker
         public ManagerConfig Config;
         public ManagerState State;
         public BuildingProgresive Progresive;
+        public int BuyMultiply = 1;
 
         public UnityEvent OnTick;
         public UnityEvent OnBuyUpgrade;
@@ -51,12 +53,13 @@ namespace uClicker
 
         public void Click(Clickable clickable)
         {
-            float amount = clickable.Amount;
+            double amount = clickable.Amount;
             Currency currency = clickable.Currency;
 
             ApplyClickPerks(clickable, ref amount);
             ApplyCurrencyPerk(currency, ref amount);
 
+            amount += amount * State.PercentUranus * State.CurrencyCurrentTotals[Config.Currencies[1]];
             bool updated = UpdateTotal(currency, amount);
             UpdateUnlocks();
             if (updated)
@@ -71,7 +74,7 @@ namespace uClicker
             bool updated = false;
             foreach (Currency currency in Config.Currencies)
             {
-                float amount = PerSecondAmount(currency);
+                double amount = PerSecondAmount(currency);
 
                 updated = UpdateTotal(currency, amount);
             }
@@ -86,10 +89,10 @@ namespace uClicker
 
         public void BuildingChanger()
         {
-            Debug.Log(State.BuildingCountType);
+           // Debug.Log(State.BuildingCountType);
             foreach (var b in State.BuildingCountType)
             {
-                Debug.Log(b);
+               // Debug.Log(b);
                 var lvl = (int)Math.Truncate((decimal)(b.Value) / Progresive.CountBuildings);
                 var build = Config.AvailableBuildings.First(x => x.BuildingType == b.Key);
                 var currentUpg = Progresive.ABP.First(x => x.Key == b.Key).Value[lvl];
@@ -121,17 +124,13 @@ namespace uClicker
 
             int buildingCount;
             State.EarnedBuildings.TryGetValue(building, out buildingCount);
-            State.EarnedBuildings[building] = buildingCount + 1;
+            State.EarnedBuildings[building] = buildingCount + BuyMultiply;
             if (State.BuildingCountType.ContainsKey(building.BuildingType))
-                State.BuildingCountType[building.BuildingType] = State.BuildingCountType[building.BuildingType]+1;
-            else
+                State.BuildingCountType[building.BuildingType] = State.BuildingCountType[building.BuildingType] + BuyMultiply;
+            else;
                 State.StartBuildingCount();
-            Debug.Log($"Buy building type : {building.BuildingType} \r\n BuildingCountType : {State.BuildingCountType[building.BuildingType]}");
-            foreach (var item in State.BuildingCountType)
-            {
-                Debug.Log(item);
-                
-            }
+            //Debug.Log($"Buy building type : {building.BuildingType} \r\n BuildingCountType : {State.BuildingCountType[building.BuildingType]}");
+           
             BuildingChanger();
 
             UpdateUnlocks();
@@ -188,11 +187,12 @@ namespace uClicker
                 return true;
             }
 
-            float amount;
+            double amount;
             State.CurrencyCurrentTotals.TryGetValue(cost.Currency, out amount);
             return amount >= cost.Amount;
         }
 
+       
         public CurrencyTuple BuildingCost(Building building)
         {
             int count;
@@ -200,9 +200,19 @@ namespace uClicker
             {
                 count = 0;
             }
+            CurrencyTuple currencyTuple = new CurrencyTuple();
+            currencyTuple.Amount = building.Cost.Amount;
+            currencyTuple.Currency = building.Cost.Currency;
+            double summ = 0;
+            
+            for (int i = 1; i <= BuyMultiply; i++)
+            {
+                currencyTuple.Amount = currencyTuple.Amount * Math.Pow(1 + Config.BuildingCostIncrease, count + i);
+                summ += currencyTuple.Amount;
+            }
 
-            CurrencyTuple currencyTuple = building.Cost;
-            currencyTuple.Amount = (int) currencyTuple.Amount * Mathf.Pow(1 + Config.BuildingCostIncrease, count);
+            currencyTuple.Amount = summ;
+
             return currencyTuple;
         }
 
@@ -259,7 +269,7 @@ namespace uClicker
 
         #region Internal Logic
 
-        private bool Deduct(Currency costCurrency, float cost)
+        private bool Deduct(Currency costCurrency, double cost)
         {
             //Debug.Log(costCurrency);
             if (State.CurrencyCurrentTotals[costCurrency] < cost)
@@ -276,16 +286,22 @@ namespace uClicker
             return true;
         }
 
-        private bool UpdateTotal(Currency currency, float amount)
+        private bool UpdateTotal(Currency currency, double amount)
         {
-            float total;
+            double total;
             State.CurrencyCurrentTotals.TryGetValue(currency, out total);
+
+            if (total != 0 && amount < 0)
+            {
+                Debug.Log($"total = {total}");
+                Debug.Log($"amount = {amount}");
+            }
             total += amount;
             State.CurrencyCurrentTotals[currency] = total;
 
             if (amount > 0 || currency.name != "Gold")
             {
-                float historicalTotal;
+                double historicalTotal;
                 State.CurrencyHistoricalTotals.TryGetValue(currency, out historicalTotal);
                 State.CurrencyHistoricalTotals[currency] = historicalTotal + amount;
             }
@@ -293,11 +309,11 @@ namespace uClicker
             return true;
         }
 
-        private float PerSecondAmount(Currency currency)
+        private double PerSecondAmount(Currency currency)
         {
             if (currency.name == "Gold")
             {
-                float amount = 0;
+                double amount = 0;
 
                 ApplyBuildingPerks(currency, ref amount);
                 ApplyCurrencyPerk(currency, ref amount);
@@ -305,7 +321,7 @@ namespace uClicker
                 {
                     return amount;
                 }
-                return amount+= amount * 1f * State.CurrencyCurrentTotals[Config.Currencies[1]];
+                return amount+= amount * State.PercentUranus * State.CurrencyCurrentTotals[Config.Currencies[1]];
             }
 
             return 0;
@@ -391,7 +407,7 @@ namespace uClicker
             return groupsUnlocked;
         }
 
-        private void ApplyClickPerks(Clickable clickable, ref float amount)
+        private void ApplyClickPerks(Clickable clickable, ref double amount)
         {
             foreach (Upgrade upgrade in State.EarnedUpgrades)
             {
@@ -415,7 +431,7 @@ namespace uClicker
             }
         }
 
-        private void ApplyBuildingPerks(Currency currency, ref float amount)
+        private void ApplyBuildingPerks(Currency currency, ref double amount)
         {
             foreach (KeyValuePair<Building, int> kvp in State.EarnedBuildings)
             {
@@ -451,7 +467,7 @@ namespace uClicker
             }
         }
 
-        private void ApplyCurrencyPerk(Currency currency, ref float amount)
+        private void ApplyCurrencyPerk(Currency currency, ref double amount)
         {
             foreach (Upgrade upgrade in State.EarnedUpgrades)
             {

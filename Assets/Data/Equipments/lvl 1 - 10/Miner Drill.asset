@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Miner Drill
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: 699d07d8-6be5-4d71-be89-2b56d924c2fa
+    _serializedGuid: b4ab07b3-cf5f-4bbe-b2fc-9f48e7f735c9
   Unlocked: 1
   RequirementGroups: []
   Cost:

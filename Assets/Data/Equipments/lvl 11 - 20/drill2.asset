@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: drill2
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: 62c681f9-aa5d-4af8-a348-f917252f82e3
+    _serializedGuid: c30719e4-d2e9-46b5-a953-38bdfb0a0fe5
   Unlocked: 0
   RequirementGroups:
   - GroupOperand: 0
@@ -23,5 +23,5 @@ MonoBehaviour:
     Amount: 50
   YieldAmount:
     Currency: {fileID: 11400000, guid: a0eaf6f8e25cf47e78246e64e59f3eba, type: 2}
-    Amount: 0.3
+    Amount: 0.30000001192092896
   BuildingType: 0

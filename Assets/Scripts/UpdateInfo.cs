@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using uClicker;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,7 +13,6 @@ public class UpdateInfo : MonoBehaviour
     public TextMeshProUGUI Upgrades;
     public TextMeshProUGUI Buildings;
     public TextMeshProUGUI IncomePerSecond;
-
     void Start()
     {
         Manager.OnTick.AddListener(OnTick);
@@ -25,10 +25,11 @@ public class UpdateInfo : MonoBehaviour
 
     private void OnTick()
     {
+        
         //Debug.Log(Manager.State.CurrencyCurrentTotals);
         Money.text = string.Join(", ",
             Manager.State.CurrencyCurrentTotals.Select((kvp) =>
-                string.Format("{0}", kvp.Value)).ToArray());
+                string.Format("{0}", LargeNumber.ToString(Convert.ToDouble(kvp.Value)))).ToArray());
     }
 
     private void OnBuyUpgrade()

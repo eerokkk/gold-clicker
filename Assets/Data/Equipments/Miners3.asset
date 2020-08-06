@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Miners3
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: c5affa71-c29a-4622-98ab-a21eb68a5f26
+    _serializedGuid: cce2226e-0d32-4754-85cf-e6b4c7022f0c
   Unlocked: 0
   RequirementGroups: []
   Cost:

@@ -10,14 +10,17 @@ public class SwitchFieldUpgrades : MonoBehaviour
     public GameObject FieldUpgrades;
     public TextMeshProUGUI MultiplyText;
     public ClickerManager GoldManager;
-    public int BuyMultiply;
 
     [SerializeField]
     private bool Activity = true;
     private int Count = 1;
-    
 
-public void switchFieldEquipment()
+    public void Start()
+    {
+        GoldManager.BuyMultiply = 1;
+    }
+
+    public void switchFieldEquipment()
     {
         switch (Activity)
         {
@@ -50,21 +53,22 @@ public void switchFieldUpgrades()
         switch (Count)
         {
             case 0:
-                BuyMultiply = 1;
-                MultiplyText.text = $"x{BuyMultiply}";
+                GoldManager.BuyMultiply = 1;
+                MultiplyText.text = $"x{GoldManager.BuyMultiply}";
                 Count++;
                 break;
             case 1:
-                BuyMultiply = 10;
-                MultiplyText.text = $"x{BuyMultiply}";
+                GoldManager.BuyMultiply = 10;
+                MultiplyText.text = $"x{GoldManager.BuyMultiply}";
                 Count++;
                 break;
             case 2:
-                BuyMultiply = 100;
-                MultiplyText.text = $"x{BuyMultiply}";
+                GoldManager.BuyMultiply = 100;
+                MultiplyText.text = $"x{GoldManager.BuyMultiply}";
                 Count++;
                 break;
             case 3:
+                GoldManager.BuyMultiply = 1000;
                 MultiplyText.text = "Max";
                 Count = 0;
                 break;

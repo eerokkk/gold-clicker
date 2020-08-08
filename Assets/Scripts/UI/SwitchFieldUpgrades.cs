@@ -17,6 +17,7 @@ public class SwitchFieldUpgrades : MonoBehaviour
     public void Start()
     {
         GoldManager.BuyMultiply = 1;
+        GoldManager.BuyMax = false;
     }
 
     public void switchFieldEquipment()
@@ -52,6 +53,7 @@ public void switchFieldUpgrades()
         switch (Count)
         {
             case 0:
+                GoldManager.BuyMax = false;
                 GoldManager.BuyMultiply = 1;
                 MultiplyText.text = $"x{GoldManager.BuyMultiply}";
                 Count++;
@@ -67,7 +69,8 @@ public void switchFieldUpgrades()
                 Count++;
                 break;
             case 3:
-                GoldManager.BuyMultiply = 1000;
+                GoldManager.BuyMultiply = 0;
+                GoldManager.BuyMax = true;
                 MultiplyText.text = "Max";
                 Count = 0;
                 break;

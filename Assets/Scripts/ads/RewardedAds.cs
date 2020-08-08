@@ -14,8 +14,8 @@ public class RewardedAds : MonoBehaviour
 
         rewardedAd = new RewardedAd(UnityID);
 
-        AdRequest request = new AdRequest.Builder().Build();
-
+       
+        
         
 
         // Called when an ad request has successfully loaded.
@@ -30,6 +30,9 @@ public class RewardedAds : MonoBehaviour
         this.rewardedAd.OnUserEarnedReward += RewardedAd_OnUserEarnedReward;
         // Called when the ad is closed.
         this.rewardedAd.OnAdClosed += RewardedAd_OnAdClosed;
+
+        AdRequest request = new AdRequest.Builder().Build();
+        rewardedAd.LoadAd(request);
     }
 
     private void RewardedAd_OnAdClosed(object sender, System.EventArgs e)
@@ -64,7 +67,9 @@ public class RewardedAds : MonoBehaviour
 
     public void OnClickAds1Button()
     {
-        AdRequest request = new AdRequest.Builder().Build();
-        rewardedAd.LoadAd(request);
+        //if (rewardedAd.IsLoaded())
+        //{
+            rewardedAd.Show();
+        //}
     }
 }

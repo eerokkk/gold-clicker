@@ -41,10 +41,13 @@ MonoBehaviour:
     _earnedBuildingsCount: 
     _earnedUpgrades: []
     _currencies: []
-    _currencyCurrentTotals: []
-    _currencyHistoricalTotals: []
+    _currencyCurrentTotals:
+    - 0
+    _currencyHistoricalTotals:
+    - 317.30000003427267
   Progresive: {fileID: 11400000, guid: c3a0bf358d0109d42a76db9f37e01166, type: 2}
-  BuyMultiply: 100
+  BuyMultiply: 0
+  BuyMax: 1
   OnTick:
     m_PersistentCalls:
       m_Calls:

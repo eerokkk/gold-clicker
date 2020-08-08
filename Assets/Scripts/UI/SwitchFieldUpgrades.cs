@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+﻿using TMPro;
 using uClicker;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class SwitchFieldUpgrades : MonoBehaviour

@@ -10,6 +10,7 @@ public class ClickerRunner : MonoBehaviour
     IEnumerator Start()
     {
         Manager.LoadProgress();
+        Manager.StartBuyMax(); 
         while (Application.isPlaying)
         {
             yield return new WaitForSecondsRealtime(1);

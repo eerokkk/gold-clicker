@@ -558,6 +558,7 @@ MonoBehaviour:
   FieldUpgrades: {fileID: 330074109}
   MultiplyText: {fileID: 2064691751}
   GoldManager: {fileID: 11400000, guid: 9a6b16ea0fb4d004dbb8f8fd012b075c, type: 2}
+  Animator: {fileID: 1189952895}
   Activity: 1
 --- !u!1 &106348222
 GameObject:

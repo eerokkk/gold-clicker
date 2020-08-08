@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using TMPro;
 using uClicker;
+using UnityEditor.SceneManagement;
 using UnityEngine;
+
 public class SwitchFieldUpgrades : MonoBehaviour
 {
     public GameObject FieldEquipment;
     public GameObject FieldUpgrades;
     public TextMeshProUGUI MultiplyText;
     public ClickerManager GoldManager;
+    public Animator Animator;
+
 
     [SerializeField]
     private bool Activity = true;
@@ -78,4 +82,17 @@ public void switchFieldUpgrades()
 
         GoldManager.OnTick.Invoke();
     }
+
+    public void OnClickSettingsButton()
+    {
+        Animator.SetBool("IsOpen", true);
+
+    }
+
+    public void OnClickBackButtonIsSettingsPanel()
+    {
+        Animator.SetBool("IsOpen", false);
+
+    }
 }
+

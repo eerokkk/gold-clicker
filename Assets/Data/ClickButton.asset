@@ -15,4 +15,4 @@ MonoBehaviour:
   GUIDContainer:
     _serializedGuid: 2e0981fd-0569-4435-82af-a005d83e4ae1
   Currency: {fileID: 11400000, guid: a0eaf6f8e25cf47e78246e64e59f3eba, type: 2}
-  Amount: 1
+  Amount: 1000000

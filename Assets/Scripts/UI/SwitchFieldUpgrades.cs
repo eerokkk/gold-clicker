@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using TMPro;
 using uClicker;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class SwitchFieldUpgrades : MonoBehaviour
@@ -81,6 +80,8 @@ public void switchFieldUpgrades()
         }
 
         GoldManager.OnTick.Invoke();
+        GoldManager.OnBuyBuilding.Invoke();
+        GoldManager.OnBuyUpgrade.Invoke();
     }
 
     public void OnClickSettingsButton()

@@ -21,6 +21,7 @@ namespace uClicker
         public ManagerState State;
         public BuildingProgresive Progresive;
         public int BuyMultiply = 1;
+        public bool BuyMax = false;
 
         public UnityEvent OnTick;
         public UnityEvent OnBuyUpgrade;
@@ -40,6 +41,18 @@ namespace uClicker
             }
         }
 #endif
+        public void StartBuyMax()
+        {
+            for(int i = 0; i < 6; i++)
+            {
+                State.BuildingMaxBuy.Add(Config.AvailableBuildings[i], 0);
+                //Debug.Log($"Config.AvailableBuildings[{i}]+++++++++++++++{Config.AvailableBuildings[i]}");
+                //Debug.Log($"State.BuildingMaxBuy+++++++++++++++{State.BuildingMaxBuy[Config.AvailableBuildings[i]]} and {i}");
+                //State.BuildingMaxBuy[Config.AvailableBuildings[i]] = i;
+                //Debug.Log($"State.BuildingMaxBuy[Config.AvailableBuildings[{i}]]+++++++++++++++{State.BuildingMaxBuy[Config.AvailableBuildings[i]]}");
+            }
+        }
+
 
         private void OnDisable()
         {
@@ -89,15 +102,12 @@ namespace uClicker
 
         public void BuildingChanger()
         {
-           // Debug.Log(State.BuildingCountType);
             foreach (var b in State.BuildingCountType)
             {
-               // Debug.Log(b);
                 var lvl = (int)Math.Truncate((decimal)(b.Value) / Progresive.CountBuildings);
                 var build = Config.AvailableBuildings.First(x => x.BuildingType == b.Key);
                 var currentUpg = Progresive.ABP.First(x => x.Key == b.Key).Value[lvl];
                 var ind = Config.AvailableBuildings.ToList().IndexOf(build);
-                //Debug.Log($"{b.Key} : {lvl}");
 
                 if(build != currentUpg)
                     Config.AvailableBuildings[ind] = currentUpg;
@@ -123,14 +133,25 @@ namespace uClicker
             }
 
             int buildingCount;
+
             State.EarnedBuildings.TryGetValue(building, out buildingCount);
-            State.EarnedBuildings[building] = buildingCount + BuyMultiply;
+            if (BuyMax)
+            {
+                State.EarnedBuildings[building] = buildingCount + State.BuildingMaxBuy[building];
+            }
+            else State.EarnedBuildings[building] = buildingCount + BuyMultiply;
+
             if (State.BuildingCountType.ContainsKey(building.BuildingType))
-                State.BuildingCountType[building.BuildingType] = State.BuildingCountType[building.BuildingType] + BuyMultiply;
+                if (BuyMax)
+                {
+                    State.BuildingCountType[building.BuildingType] = State.BuildingCountType[building.BuildingType] + State.BuildingMaxBuy[building];
+                }
+                else State.BuildingCountType[building.BuildingType] = State.BuildingCountType[building.BuildingType] + BuyMultiply;
             else;
                 State.StartBuildingCount();
             //Debug.Log($"Buy building type : {building.BuildingType} \r\n BuildingCountType : {State.BuildingCountType[building.BuildingType]}");
-           
+
+            State.BuildingMaxBuy[building] = 0;
             BuildingChanger();
 
             UpdateUnlocks();
@@ -204,12 +225,41 @@ namespace uClicker
             currencyTuple.Amount = building.Cost.Amount;
             currencyTuple.Currency = building.Cost.Currency;
             double summ = 0;
-            
-            for (int i = 1; i <= BuyMultiply; i++)
+
+            if(!BuyMax)
+                for (int i = 1; i <= BuyMultiply; i++)
+                {
+                    currencyTuple.Amount = currencyTuple.Amount * Math.Pow(1 + Config.BuildingCostIncrease, count );
+                    summ += currencyTuple.Amount;
+                }
+            else
             {
-                currencyTuple.Amount = currencyTuple.Amount * Math.Pow(1 + Config.BuildingCostIncrease, count + i);
-                summ += currencyTuple.Amount;
+                int up = 0;
+                for (int i = 1; i >  up; i++)
+                {
+                    summ += currencyTuple.Amount;
+                    if (summ >= State.CurrencyCurrentTotals[currencyTuple.Currency])
+                    {
+                        if (State.CurrencyCurrentTotals[currencyTuple.Currency] > currencyTuple.Amount)
+                        {
+                            summ -= currencyTuple.Amount;
+                        }
+                        else  summ = currencyTuple.Amount;
+
+                        if (State.CurrencyCurrentTotals[currencyTuple.Currency] == currencyTuple.Amount)
+                        {
+                            State.BuildingMaxBuy[building] = 1;
+                        }
+                        else { State.BuildingMaxBuy[building] = i; Debug.Log($"i = = = = = = = = = {i}"); }
+
+
+                        break;
+                    }
+                    currencyTuple.Amount = currencyTuple.Amount * 1.15;
+                }
             }
+
+
 
             currencyTuple.Amount = summ;
 

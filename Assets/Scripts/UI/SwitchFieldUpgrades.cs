@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using uClicker;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class SwitchFieldUpgrades : MonoBehaviour
@@ -10,6 +11,8 @@ public class SwitchFieldUpgrades : MonoBehaviour
     public GameObject FieldUpgrades;
     public TextMeshProUGUI MultiplyText;
     public ClickerManager GoldManager;
+    public Animator Animator;
+
 
     [SerializeField]
     private bool Activity = true;
@@ -18,6 +21,7 @@ public class SwitchFieldUpgrades : MonoBehaviour
     public void Start()
     {
         GoldManager.BuyMultiply = 1;
+        GoldManager.BuyMax = false;
     }
 
     public void switchFieldEquipment()
@@ -53,6 +57,7 @@ public void switchFieldUpgrades()
         switch (Count)
         {
             case 0:
+                GoldManager.BuyMax = false;
                 GoldManager.BuyMultiply = 1;
                 MultiplyText.text = $"x{GoldManager.BuyMultiply}";
                 Count++;
@@ -68,7 +73,8 @@ public void switchFieldUpgrades()
                 Count++;
                 break;
             case 3:
-                GoldManager.BuyMultiply = 1000;
+                GoldManager.BuyMultiply = 0;
+                GoldManager.BuyMax = true;
                 MultiplyText.text = "Max";
                 Count = 0;
                 break;
@@ -76,4 +82,17 @@ public void switchFieldUpgrades()
 
         GoldManager.OnTick.Invoke();
     }
+
+    public void OnClickSettingsButton()
+    {
+        Animator.SetBool("IsOpen", true);
+
+    }
+
+    public void OnClickBackButtonIsSettingsPanel()
+    {
+        Animator.SetBool("IsOpen", false);
+
+    }
 }
+

@@ -12,9 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 503aec7f6e89dd946b5200be8d304799, type: 3}
   m_Name: Building Progresive
   m_EditorClassIdentifier: 
-  GUIDContainer:
-    _serializedGuid: e6068045-1cd8-471a-9a79-1f5be0a0d832
-  CountBuildings: 20
+  CountBuildings: 100
   Miners:
   - {fileID: 11400000, guid: 334dafe90f2dd4b118bfccbe0dba4fda, type: 2}
   - {fileID: 11400000, guid: 44a3de177c5409449a586c00c24d8a82, type: 2}

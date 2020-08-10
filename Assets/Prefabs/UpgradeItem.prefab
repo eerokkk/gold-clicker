@@ -318,7 +318,7 @@ MonoBehaviour:
   Name: {fileID: 5770566449909040358}
   Cost: {fileID: 2121684525276210673}
   Description: {fileID: 3361969372763733879}
-  UpdateTypeCount: {fileID: 0}
+  UpdateTypeCount: {fileID: 8861981250647011369}
 --- !u!1 &1413275240320800
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,7 +532,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.515411, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.070007324, y: 0.26773834}
+  m_AnchoredPosition: {x: -0.34799194, y: 0.26773834}
   m_SizeDelta: {x: 0.6960144, y: -0.5354767}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &222250215294098998
@@ -710,7 +710,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.51320595, y: 0.11865199}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.26000977, y: -1.8622742}
+  m_AnchoredPosition: {x: 0.5829468, y: -1.8622742}
   m_SizeDelta: {x: 1.1658936, y: 3.7245483}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &222322702635048794

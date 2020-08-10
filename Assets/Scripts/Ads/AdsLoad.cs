@@ -18,6 +18,12 @@ public class AdsLoad : MonoBehaviour, IInterstitialAdListener
             true);
     }
 
+    public void ShowInterstitialAds()
+    {
+        colbs.text = "";
+        Appodeal.show(Appodeal.INTERSTITIAL);
+    }
+
     public void onInterstitialLoaded(bool isPrecache)
     {
         colbs.text += "onInterstitialLoaded\r\n";

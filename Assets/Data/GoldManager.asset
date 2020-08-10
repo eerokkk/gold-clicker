@@ -26,7 +26,7 @@ MonoBehaviour:
     Clickables:
     - {fileID: 11400000, guid: 548a7f6b6abf7df449ce337d26c47358, type: 2}
     AvailableBuildings:
-    - {fileID: 11400000, guid: 334dafe90f2dd4b118bfccbe0dba4fda, type: 2}
+    - {fileID: 11400000, guid: 9edd4f942fdcad848ad166cb6eea6bca, type: 2}
     - {fileID: 11400000, guid: f24d7d7d04ffdb3409a09779aff7e9f0, type: 2}
     - {fileID: 11400000, guid: 2a723533c3a87ab4fb6b7f459aa6f160, type: 2}
     - {fileID: 11400000, guid: f7a6466584e4e0a489b8483e1357fd3e, type: 2}
@@ -37,24 +37,29 @@ MonoBehaviour:
     BuildingCostIncrease: 0.15
   State:
     PercentUranus: 0
-    _earnedBuildings: []
-    _earnedBuildingsCount: 
+    _earnedBuildings:
+    - _serializedGuid: e296f0e0-70d7-40b3-99ad-c3cb90b6b5ee
+    - _serializedGuid: c4e712ab-6cdf-4a9a-8758-7ad03a296092
+    - _serializedGuid: 1ddb26d8-7600-4b5e-8a01-36495fa3d14c
+    - _serializedGuid: 9b19d6d2-9b89-42e7-a082-d97aa12a29b2
+    - _serializedGuid: 381caa07-efac-47ce-a025-2cbb2fbee367
+    _earnedBuildingsCount: 990000003f0000000b0000000100000064000000
     _earnedUpgrades: []
     _currencies:
     - _serializedGuid: 994443d8-f649-4991-a736-7efdee18c708
     - _serializedGuid: 552a08b9-c8ae-46b2-8435-37b21bab46dc
     - _serializedGuid: 83f24810-2df3-40c2-b68b-5c0abe38279d
     _currencyCurrentTotals:
-    - 0
+    - 6075980.268843028
     - 0
     - 0
     _currencyHistoricalTotals:
-    - 317.30000003427267
+    - 20136333.40026194
     - 0
     - 0
   Progresive: {fileID: 11400000, guid: c3a0bf358d0109d42a76db9f37e01166, type: 2}
-  BuyMultiply: 0
-  BuyMax: 1
+  BuyMultiply: 100
+  BuyMax: 0
   OnTick:
     m_PersistentCalls:
       m_Calls:

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GUIDContainer:
     _serializedGuid: 1ddb26d8-7600-4b5e-8a01-36495fa3d14c
-  Unlocked: 0
+  Unlocked: 1
   RequirementGroups: []
   Cost:
     Currency: {fileID: 11400000, guid: a0eaf6f8e25cf47e78246e64e59f3eba, type: 2}

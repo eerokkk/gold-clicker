@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5da1617835f149d3965a1c1b221c357d, type: 3}
+  m_Name: Winch
+  m_EditorClassIdentifier: 
+  GUIDContainer:
+    _serializedGuid: 9c434e42-6c44-409a-a5f2-22d45c116108
+  Unlocked: 0
+  RequirementGroups: []
+  Cost:
+    Currency: {fileID: 0}
+    Amount: 0
+  UpgradePerk: []

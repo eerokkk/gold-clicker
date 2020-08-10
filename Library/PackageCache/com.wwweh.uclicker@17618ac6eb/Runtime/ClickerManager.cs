@@ -125,28 +125,22 @@ namespace uClicker
             {
                 return;
             }
-
+            BuyMultiply = State.BuildingMaxBuy[building];
             CurrencyTuple cost = BuildingCost(building);
             if (!Deduct(cost.Currency, cost.Amount))
             {
                 return;
             }
 
+            
             int buildingCount;
 
             State.EarnedBuildings.TryGetValue(building, out buildingCount);
-            if (BuyMax)
-            {
-                State.EarnedBuildings[building] = buildingCount + State.BuildingMaxBuy[building];
-            }
-            else State.EarnedBuildings[building] = buildingCount + BuyMultiply;
+
+            State.EarnedBuildings[building] = buildingCount + BuyMultiply;
 
             if (State.BuildingCountType.ContainsKey(building.BuildingType))
-                if (BuyMax)
-                {
-                    State.BuildingCountType[building.BuildingType] = State.BuildingCountType[building.BuildingType] + State.BuildingMaxBuy[building];
-                }
-                else State.BuildingCountType[building.BuildingType] = State.BuildingCountType[building.BuildingType] + BuyMultiply;
+                State.BuildingCountType[building.BuildingType] = State.BuildingCountType[building.BuildingType] + BuyMultiply;
             else;
                 State.StartBuildingCount();
             //Debug.Log($"Buy building type : {building.BuildingType} \r\n BuildingCountType : {State.BuildingCountType[building.BuildingType]}");
@@ -190,7 +184,6 @@ namespace uClicker
                 {
                     return false;
                 }
-
                 cost = BuildingCost(building);
             }
             else if (component is Upgrade)
@@ -231,6 +224,7 @@ namespace uClicker
                 {
                     currencyTuple.Amount = currencyTuple.Amount * Math.Pow(1 + Config.BuildingCostIncrease, count );
                     summ += currencyTuple.Amount;
+                    State.BuildingMaxBuy[building] = BuyMultiply;
                 }
             else
             {
@@ -240,17 +234,23 @@ namespace uClicker
                     summ += currencyTuple.Amount;
                     if (summ >= State.CurrencyCurrentTotals[currencyTuple.Currency])
                     {
-                        if (State.CurrencyCurrentTotals[currencyTuple.Currency] > currencyTuple.Amount)
+                        if ((summ - currencyTuple.Amount)<= 0)
+                        {
+                            summ = currencyTuple.Amount;
+                        }
+                        else
                         {
                             summ -= currencyTuple.Amount;
                         }
-                        else  summ = currencyTuple.Amount;
 
                         if (State.CurrencyCurrentTotals[currencyTuple.Currency] == currencyTuple.Amount)
                         {
                             State.BuildingMaxBuy[building] = 1;
                         }
-                        else { State.BuildingMaxBuy[building] = i; Debug.Log($"i = = = = = = = = = {i}"); }
+                        else 
+                        {
+                            State.BuildingMaxBuy[building] = i - 1;
+                        }
 
 
                         break;
@@ -258,8 +258,6 @@ namespace uClicker
                     currencyTuple.Amount = currencyTuple.Amount * 1.15;
                 }
             }
-
-
 
             currencyTuple.Amount = summ;
 
@@ -324,6 +322,7 @@ namespace uClicker
             //Debug.Log(costCurrency);
             if (State.CurrencyCurrentTotals[costCurrency] < cost)
             {
+                Debug.Log($"FALSE , State.CurrencyCurrentTotals[costCurrency] ===== {State.CurrencyCurrentTotals[costCurrency]},   cost ================{cost}");
                 return false;
             }
 

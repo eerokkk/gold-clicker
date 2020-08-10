@@ -2368,6 +2368,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 351873843}
   m_CullTransparentMesh: 0
+--- !u!1 &454268268 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4605584487622408767, guid: 1f34cc177f72f1a4396745b11e1b89ed,
+    type: 3}
+  m_PrefabInstance: {fileID: 330074108}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &454268269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454268268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ee2908dc5668479c899f28ee8dbd7fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clickerManager: {fileID: 11400000, guid: 9a6b16ea0fb4d004dbb8f8fd012b075c, type: 2}
+  _prefab: {fileID: 1369202087129394, guid: 3e083f79da6aa4635b574d9afdba0268, type: 3}
 --- !u!1 &464886965
 GameObject:
   m_ObjectHideFlags: 0
@@ -5858,7 +5878,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1113098328}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1609647615
+--- !u!114 &1609647614
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5867,25 +5887,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1609647613}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ee2908dc5668479c899f28ee8dbd7fa, type: 3}
+  m_Script: {fileID: 11500000, guid: a94361ac2c8154bc0ac70dc8e57cfe14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _clickerManager: {fileID: 11400000, guid: 9a6b16ea0fb4d004dbb8f8fd012b075c, type: 2}
   _prefab: {fileID: 1369202087129394, guid: 3e083f79da6aa4635b574d9afdba0268, type: 3}
---- !u!114 &1609647617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1609647613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalFit: 0
-  m_VerticalFit: 2
 --- !u!1 &1627375939
 GameObject:
   m_ObjectHideFlags: 0

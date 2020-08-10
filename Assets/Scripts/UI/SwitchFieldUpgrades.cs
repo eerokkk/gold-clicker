@@ -10,9 +10,6 @@ public class SwitchFieldUpgrades : MonoBehaviour
     public ClickerManager GoldManager;
     public Animator Animator;
 
-
-    [SerializeField]
-    private bool Activity = true;
     private int Count = 1;
 
     public void Start()
@@ -23,30 +20,14 @@ public class SwitchFieldUpgrades : MonoBehaviour
 
     public void switchFieldEquipment()
     {
-        switch (Activity)
-        {
-            case true:
-                FieldEquipment.SetActive(true);
-                FieldUpgrades.SetActive(false);
-                Activity = false;
-                break;
-            case false:
-                break;
-        }
+        FieldEquipment.SetActive(true);
+        FieldUpgrades.SetActive(false);
     }
 
 public void switchFieldUpgrades()
     {
-        switch (Activity == false)
-        {
-            case true:
-                FieldEquipment.SetActive(false);
-                FieldUpgrades.SetActive(true);
-                Activity = true;
-                break;
-            case false:
-                break;
-        }
+        FieldUpgrades.SetActive(true);
+        FieldEquipment.SetActive(false);
     }
 
     public void changeTextInMultiplyButton()

@@ -4571,7 +4571,7 @@ PrefabInstance:
     - target: {fileID: 4605584487622408765, guid: 1f34cc177f72f1a4396745b11e1b89ed,
         type: 3}
       propertyPath: m_Spacing
-      value: 90
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4605584488507518790, guid: 1f34cc177f72f1a4396745b11e1b89ed,
         type: 3}
@@ -5416,7 +5416,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1448305487
 Transform:
   m_ObjectHideFlags: 0
@@ -5443,6 +5443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9723cdc055c18d74e96aeb74fe052786, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zalypa: {fileID: 0}
 --- !u!1 &1469545593
 GameObject:
   m_ObjectHideFlags: 0

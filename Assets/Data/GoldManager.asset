@@ -33,21 +33,49 @@ MonoBehaviour:
     - {fileID: 11400000, guid: feb40d80187a36a42912de56cef2d7fa, type: 2}
     - {fileID: 11400000, guid: e82620386352247439215ae3586cbc5f, type: 2}
     AvailableUpgrades:
-    - {fileID: 11400000, guid: de700cfa5679c3940be43f5375833750, type: 2}
+    - {fileID: 11400000, guid: 79566063186a82045ae83f9111b3a0d5, type: 2}
+    - {fileID: 11400000, guid: 3c2efd29a7389714881234e7cf6284ea, type: 2}
+    - {fileID: 11400000, guid: 97a58e4017e71f2499e10c68e6e2e275, type: 2}
+    - {fileID: 11400000, guid: 4be00184e3c34984fb3865b3767ccd18, type: 2}
+    - {fileID: 11400000, guid: 91584f46665791144bd7074950950811, type: 2}
+    - {fileID: 11400000, guid: c7c552edf4570b4479bed975d4482619, type: 2}
+    - {fileID: 11400000, guid: befbd4f30494e2d4aadb657ce62ea9ca, type: 2}
+    - {fileID: 11400000, guid: 215e56e63ec263a4b8f1e93ed959c828, type: 2}
     BuildingCostIncrease: 0.15
   State:
     PercentUranus: 0
-    _earnedBuildings: []
-    _earnedBuildingsCount: 
-    _earnedUpgrades: []
-    _currencies: []
+    _earnedBuildings:
+    - _serializedGuid: 78fab584-e63a-492c-8a98-a9b6ec732d55
+    - _serializedGuid: 416a8824-6938-4fe3-b065-e133b34897d3
+    - _serializedGuid: be54cecf-a74f-4a4b-b81e-883c7aacb365
+    - _serializedGuid: 699d07d8-6be5-4d71-be89-2b56d924c2fa
+    - _serializedGuid: 575e7b38-dce6-443c-ad1e-b91a5cb3d468
+    - _serializedGuid: 9c9d32dd-b529-4126-9fca-88ad50d68dd6
+    _earnedBuildingsCount: 2a0000000600000007000000040000000300000003000000
+    _earnedUpgrades:
+    - _serializedGuid: ee354254-9a81-45ba-901b-fb9c52cc937d
+    - _serializedGuid: f277ab17-7f4d-4278-a408-9a24cc8bffc8
+    - _serializedGuid: 756e33f9-5620-4a20-a390-00011415d05f
+    - _serializedGuid: 421deb32-461d-401c-a2e8-d1caa566832d
+    - _serializedGuid: d989d90e-513c-4753-8c85-9270502a5837
+    - _serializedGuid: 6e8293a7-a515-4e4a-88ab-fffcf59e329d
+    - _serializedGuid: f089a5ff-cc50-4e9e-84c2-e5923eafc950
+    - _serializedGuid: 99d2ae36-6c18-49d8-a24c-d97078e7a489
+    _currencies:
+    - _serializedGuid: 8e3afbdb-282c-4206-917c-8e0c8068acfd
+    - _serializedGuid: d589a84d-0196-4fc6-b103-37a014662613
+    - _serializedGuid: abb1eea1-c734-470b-854d-b7c83779ea7c
     _currencyCurrentTotals:
+    - 4848745.523496942
+    - 0
     - 0
     _currencyHistoricalTotals:
-    - 317.30000003427267
+    - 5089780.900002279
+    - 0
+    - 0
   Progresive: {fileID: 11400000, guid: c3a0bf358d0109d42a76db9f37e01166, type: 2}
-  BuyMultiply: 0
-  BuyMax: 1
+  BuyMultiply: 1
+  BuyMax: 0
   OnTick:
     m_PersistentCalls:
       m_Calls:

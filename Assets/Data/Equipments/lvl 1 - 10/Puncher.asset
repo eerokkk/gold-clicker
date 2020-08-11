@@ -17,6 +17,12 @@ MonoBehaviour:
   Unlocked: 0
   RequirementGroups: []
   Cost:
-    Currency: {fileID: 0}
-    Amount: 0
-  UpgradePerk: []
+    Currency: {fileID: 11400000, guid: a0eaf6f8e25cf47e78246e64e59f3eba, type: 2}
+    Amount: 10000
+  UpgradePerk:
+  - Type: 2
+    TargetBuilding: {fileID: 0}
+    TargetClickable: {fileID: 11400000, guid: 548a7f6b6abf7df449ce337d26c47358, type: 2}
+    TargetCurrency: {fileID: 0}
+    Operation: 0
+    Amount: 5000

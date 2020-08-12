@@ -12,6 +12,8 @@ public class Binder : MonoBehaviour
     public TextMeshProUGUI Cost;
     public TextMeshProUGUI Description;
     public TextMeshProUGUI UpdateTypeCount;
+    public Sprite MinerIcon;
+    public GameObject PrefabIcon;
     private UnlockableComponent _clickerComponent;
     private Button _button;
 
@@ -31,7 +33,7 @@ public class Binder : MonoBehaviour
     {
         _clickerComponent = availableUpgrade;
         this.Name.text = availableUpgrade.name;
-        this.Cost.text = availableUpgrade.Cost.ToString();
+        this.Cost.text = LargeNumber.ToString(availableUpgrade.Cost.Amount);
         this.Description.text = GenerateUpgradeString(availableUpgrade.UpgradePerk);
         _button = this.GetComponent<Button>();
         _clickerManager.OnTick.AddListener(IsActive);
@@ -40,10 +42,11 @@ public class Binder : MonoBehaviour
 
     public void Bind(Building availableBuilding)
     {
+        //pushSprite(availableBuilding);
         //Debug.Log(availableBuilding);
         _clickerComponent = availableBuilding;
         this.Name.text = availableBuilding.name;
-        this.Cost.text = _clickerManager.BuildingCost(availableBuilding).ToString();
+        this.Cost.text = LargeNumber.ToString(_clickerManager.BuildingCost(availableBuilding).Amount);
         this.Description.text = string.Format("+{0} {1}s per second", availableBuilding.YieldAmount.Amount,
             availableBuilding.YieldAmount.Currency.name);
         try
@@ -61,6 +64,13 @@ public class Binder : MonoBehaviour
         _button = this.GetComponent<Button>();
         _clickerManager.OnTick.AddListener(IsActive);
         IsActive();
+    }
+
+    public void pushSprite(Building gavno)
+    {
+        var BuildingType = _clickerManager.State.BuildingCountType[gavno.BuildingType].ToString();
+        if (BuildingType == "Miners")
+            PrefabIcon.GetComponent<Image>().sprite = MinerIcon;
     }
 
     private void IsActive()

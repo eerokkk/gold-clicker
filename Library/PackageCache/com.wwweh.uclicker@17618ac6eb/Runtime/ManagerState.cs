@@ -14,7 +14,7 @@ namespace uClicker
         [NonSerialized] public Dictionary<Currency, double> CurrencyHistoricalTotals = new Dictionary<Currency, double>();
         public Dictionary<BuildingType, int> BuildingCountType = new Dictionary<BuildingType, int>();
         [SerializeField] public double PercentUranus;
-
+        public Dictionary<Building, int> BuildingMaxBuy = new Dictionary<Building, int>(); 
 
         [SerializeField] private List<GUIDContainer> _earnedBuildings = new List<GUIDContainer>();
         [SerializeField] private List<int> _earnedBuildingsCount = new List<int>();
@@ -26,6 +26,7 @@ namespace uClicker
         public void StartBuildingCount()
         {
             BuildingCountType.Clear();
+            BuildingMaxBuy.Clear();
             foreach (var a in EarnedBuildings)
             {
                 if (!BuildingCountType.ContainsKey(a.Key.BuildingType))
@@ -34,8 +35,6 @@ namespace uClicker
                     BuildingCountType[a.Key.BuildingType] = BuildingCountType[a.Key.BuildingType] + a.Value;
                 //Debug.Log(a);
             }
-        
-        
         }
         public void OnBeforeSerialize()
         {

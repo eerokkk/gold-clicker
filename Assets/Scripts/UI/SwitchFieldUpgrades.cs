@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+﻿using TMPro;
 using uClicker;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SwitchFieldUpgrades : MonoBehaviour
 {
@@ -10,6 +9,8 @@ public class SwitchFieldUpgrades : MonoBehaviour
     public GameObject FieldUpgrades;
     public TextMeshProUGUI MultiplyText;
     public ClickerManager GoldManager;
+    public Animator Animator;
+
 
     [SerializeField]
     private bool Activity = true;
@@ -18,34 +19,19 @@ public class SwitchFieldUpgrades : MonoBehaviour
     public void Start()
     {
         GoldManager.BuyMultiply = 1;
+        GoldManager.BuyMax = false;
     }
 
     public void switchFieldEquipment()
     {
-        switch (Activity)
-        {
-            case true:
-                FieldEquipment.SetActive(true);
-                FieldUpgrades.SetActive(false);
-                Activity = false;
-                break;
-            case false:
-                break;
-        }
+        FieldEquipment.SetActive(true);
+        FieldUpgrades.SetActive(false);
     }
 
 public void switchFieldUpgrades()
     {
-        switch (Activity == false)
-        {
-            case true:
-                FieldEquipment.SetActive(false);
-                FieldUpgrades.SetActive(true);
-                Activity = true;
-                break;
-            case false:
-                break;
-        }
+        FieldUpgrades.SetActive(true);
+        FieldEquipment.SetActive(false);
     }
 
     public void changeTextInMultiplyButton()
@@ -53,6 +39,7 @@ public void switchFieldUpgrades()
         switch (Count)
         {
             case 0:
+                GoldManager.BuyMax = false;
                 GoldManager.BuyMultiply = 1;
                 MultiplyText.text = $"x{GoldManager.BuyMultiply}";
                 Count++;
@@ -68,12 +55,28 @@ public void switchFieldUpgrades()
                 Count++;
                 break;
             case 3:
-                GoldManager.BuyMultiply = 1000;
+                GoldManager.BuyMultiply = 0;
+                GoldManager.BuyMax = true;
                 MultiplyText.text = "Max";
                 Count = 0;
                 break;
         }
 
         GoldManager.OnTick.Invoke();
+        GoldManager.OnBuyBuilding.Invoke();
+        GoldManager.OnBuyUpgrade.Invoke();
+    }
+
+    public void OnClickSettingsButton()
+    {
+        Animator.SetBool("IsOpen", true);
+
+    }
+
+    public void OnClickBackButtonIsSettingsPanel()
+    {
+        Animator.SetBool("IsOpen", false);
+
     }
 }
+

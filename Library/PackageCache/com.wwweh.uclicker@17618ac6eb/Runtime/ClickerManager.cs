@@ -222,19 +222,19 @@ namespace uClicker
             if(!BuyMax)
                 for (int i = 1; i <= BuyMultiply; i++)
                 {
-                    currencyTuple.Amount = currencyTuple.Amount * Math.Pow(1 + Config.BuildingCostIncrease, count );
+                    currencyTuple.Amount = currencyTuple.Amount * Math.Pow(1 + Config.BuildingCostIncrease, count);
                     summ += currencyTuple.Amount;
                     State.BuildingMaxBuy[building] = BuyMultiply;
                 }
             else
             {
                 int up = 0;
-                for (int i = 1; i >  up; i++)
+                for (int i = 1; i > up; i++)
                 {
                     summ += currencyTuple.Amount;
                     if (summ >= State.CurrencyCurrentTotals[currencyTuple.Currency])
                     {
-                        if ((summ - currencyTuple.Amount)<= 0)
+                        if ((summ - currencyTuple.Amount) <= 0)
                         {
                             summ = currencyTuple.Amount;
                         }
@@ -247,7 +247,7 @@ namespace uClicker
                         {
                             State.BuildingMaxBuy[building] = 1;
                         }
-                        else 
+                        else
                         {
                             State.BuildingMaxBuy[building] = i - 1;
                         }
@@ -255,6 +255,7 @@ namespace uClicker
 
                         break;
                     }
+
                     currencyTuple.Amount = currencyTuple.Amount * 1.15;
                 }
             }

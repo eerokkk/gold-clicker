@@ -18,8 +18,8 @@ MonoBehaviour:
   RequirementGroups: []
   Cost:
     Currency: {fileID: 11400000, guid: a0eaf6f8e25cf47e78246e64e59f3eba, type: 2}
-    Amount: 600
+    Amount: 500
   YieldAmount:
     Currency: {fileID: 11400000, guid: a0eaf6f8e25cf47e78246e64e59f3eba, type: 2}
-    Amount: 5
-  BuildingType: 0
+    Amount: 4
+  BuildingType: 2

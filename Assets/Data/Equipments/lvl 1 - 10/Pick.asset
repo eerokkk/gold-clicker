@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Pick
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: 583cf18f-7a01-4469-bd0e-8e971716db4e
+    _serializedGuid: 3f93c165-f1f7-4914-9a9e-93007aec18ae
   Unlocked: 1
   RequirementGroups: []
   Cost:

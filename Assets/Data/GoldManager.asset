@@ -51,14 +51,22 @@ MonoBehaviour:
     BuildingCostIncrease: 0.15
   State:
     PercentUranus: 0
-    _earnedBuildings: []
-    _earnedBuildingsCount: 
+    _earnedBuildings: [{_serializedGuid: e296f0e0-70d7-40b3-99ad-c3cb90b6b5ee}]
+    _earnedBuildingsCount: 0a000000
     _earnedUpgrades: []
-    _currencies: []
-    _currencyCurrentTotals: []
-    _currencyHistoricalTotals: []
+    _currencies:
+    - _serializedGuid: 994443d8-f649-4991-a736-7efdee18c708
+    - _serializedGuid: 552a08b9-c8ae-46b2-8435-37b21bab46dc
+    - _serializedGuid: 83f24810-2df3-40c2-b68b-5c0abe38279d
+    _currencyCurrentTotals:
+    - 57475709.03336304
+    - 0
+    _currencyHistoricalTotals:
+    - 71566884.70003703
+    - 0
+    - 0
   Progresive: {fileID: 11400000, guid: c3a0bf358d0109d42a76db9f37e01166, type: 2}
-  BuyMultiply: 1
+  BuyMultiply: 100
   BuyMax: 0
   OnTick:
     m_PersistentCalls:

@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections;
+using System.Linq;
 using TMPro;
 using uClicker;
 using UnityEngine;
@@ -12,7 +13,8 @@ public class Binder : MonoBehaviour
     public TextMeshProUGUI Cost;
     public TextMeshProUGUI Description;
     public TextMeshProUGUI UpdateTypeCount;
-    public Sprite MinerIcon;
+    public Sprite Miner;
+    public Sprite Pick;
     public GameObject PrefabIcon;
     private UnlockableComponent _clickerComponent;
     private Button _button;
@@ -42,8 +44,6 @@ public class Binder : MonoBehaviour
 
     public void Bind(Building availableBuilding)
     {
-        //pushSprite(availableBuilding);
-        //Debug.Log(availableBuilding);
         _clickerComponent = availableBuilding;
         this.Name.text = availableBuilding.name;
         this.Cost.text = LargeNumber.ToString(_clickerManager.BuildingCost(availableBuilding).Amount);
@@ -66,11 +66,26 @@ public class Binder : MonoBehaviour
         IsActive();
     }
 
-    public void pushSprite(Building gavno)
+    public void pushSpriteInBuilding(Building availableBuilding)
     {
-        var BuildingType = _clickerManager.State.BuildingCountType[gavno.BuildingType].ToString();
-        if (BuildingType == "Miners")
-            PrefabIcon.GetComponent<Image>().sprite = MinerIcon;
+        string BuildingName = availableBuilding.name;
+        switch (BuildingName)
+        {
+            case "Miner":
+                PrefabIcon.GetComponent<Image>().sprite = Miner;
+                break;
+        }  
+    }
+
+    public void pushSpriteInUpgrade(Upgrade availableUpgrade)
+    {
+        string UpgradeName = availableUpgrade.name;
+        switch (UpgradeName)
+        {
+            case "Pick":
+                PrefabIcon.GetComponent<Image>().sprite = Pick;
+                break;
+        }
     }
 
     private void IsActive()

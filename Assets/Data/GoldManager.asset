@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GoldManager
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: 82c4ea11-cbda-4adc-9261-c5868d116d9c
+    _serializedGuid: 6141ad06-4ad0-4956-9513-735f837c3654
   SaveSettings:
     SaveType: 0
     SaveName: save
@@ -26,14 +26,7 @@ MonoBehaviour:
     Clickables:
     - {fileID: 11400000, guid: 548a7f6b6abf7df449ce337d26c47358, type: 2}
     AvailableBuildings:
-    - {fileID: 11400000, guid: 334dafe90f2dd4b118bfccbe0dba4fda, type: 2}
-    - {fileID: 11400000, guid: f24d7d7d04ffdb3409a09779aff7e9f0, type: 2}
-    - {fileID: 11400000, guid: 2a723533c3a87ab4fb6b7f459aa6f160, type: 2}
-    - {fileID: 11400000, guid: f7a6466584e4e0a489b8483e1357fd3e, type: 2}
-    - {fileID: 11400000, guid: feb40d80187a36a42912de56cef2d7fa, type: 2}
-    - {fileID: 11400000, guid: e82620386352247439215ae3586cbc5f, type: 2}
-    - {fileID: 11400000, guid: c31ed9444bb0b8f46be650f4794e0df0, type: 2}
-    - {fileID: 11400000, guid: 2807a0abecbf46245a18d02253a8cf15, type: 2}
+    - {fileID: 11400000, guid: 44a3de177c5409449a586c00c24d8a82, type: 2}
     - {fileID: 11400000, guid: f24d7d7d04ffdb3409a09779aff7e9f0, type: 2}
     - {fileID: 11400000, guid: 2a723533c3a87ab4fb6b7f459aa6f160, type: 2}
     - {fileID: 11400000, guid: f7a6466584e4e0a489b8483e1357fd3e, type: 2}
@@ -50,23 +43,31 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 215e56e63ec263a4b8f1e93ed959c828, type: 2}
     BuildingCostIncrease: 0.15
   State:
-    PercentUranus: 0
-    _earnedBuildings: [{_serializedGuid: e296f0e0-70d7-40b3-99ad-c3cb90b6b5ee}]
-    _earnedBuildingsCount: 0a000000
+    PercentUranus: 0.01
+    _earnedBuildings:
+    - _serializedGuid: 575e7b38-dce6-443c-ad1e-b91a5cb3d468
+    - _serializedGuid: 9c9d32dd-b529-4126-9fca-88ad50d68dd6
+    - _serializedGuid: 699d07d8-6be5-4d71-be89-2b56d924c2fa
+    - _serializedGuid: be54cecf-a74f-4a4b-b81e-883c7aacb365
+    - _serializedGuid: 416a8824-6938-4fe3-b065-e133b34897d3
+    - _serializedGuid: 78fab584-e63a-492c-8a98-a9b6ec732d55
+    - _serializedGuid: 78bf85ac-15bc-4d47-9187-a51eccd57176
+    _earnedBuildingsCount: 290000000f000000160000001e000000280000003b00000014000000
     _earnedUpgrades: []
     _currencies:
-    - _serializedGuid: 994443d8-f649-4991-a736-7efdee18c708
-    - _serializedGuid: 552a08b9-c8ae-46b2-8435-37b21bab46dc
-    - _serializedGuid: 83f24810-2df3-40c2-b68b-5c0abe38279d
+    - _serializedGuid: 8e3afbdb-282c-4206-917c-8e0c8068acfd
+    - _serializedGuid: d589a84d-0196-4fc6-b103-37a014662613
+    - _serializedGuid: abb1eea1-c734-470b-854d-b7c83779ea7c
     _currencyCurrentTotals:
-    - 57475709.03336304
+    - 124273.40806294978
+    - 0
     - 0
     _currencyHistoricalTotals:
-    - 71566884.70003703
+    - 145297239.50002426
     - 0
     - 0
   Progresive: {fileID: 11400000, guid: c3a0bf358d0109d42a76db9f37e01166, type: 2}
-  BuyMultiply: 100
+  BuyMultiply: 10
   BuyMax: 0
   OnTick:
     m_PersistentCalls:

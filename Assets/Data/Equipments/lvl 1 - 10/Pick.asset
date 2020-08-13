@@ -13,12 +13,16 @@ MonoBehaviour:
   m_Name: Pick
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: 3f93c165-f1f7-4914-9a9e-93007aec18ae
+    _serializedGuid: ee354254-9a81-45ba-901b-fb9c52cc937d
   Unlocked: 1
   RequirementGroups: []
   Cost:
     Currency: {fileID: 11400000, guid: a0eaf6f8e25cf47e78246e64e59f3eba, type: 2}
     Amount: 10
-  UpgradePerk: [{Type: 2, TargetBuilding: {fileID: 0}, TargetClickable: {fileID: 11400000,
-        guid: 548a7f6b6abf7df449ce337d26c47358, type: 2}, TargetCurrency: {fileID: 0},
-      Operation: 0, Amount: 5}]
+  UpgradePerk:
+  - Type: 2
+    TargetBuilding: {fileID: 0}
+    TargetClickable: {fileID: 11400000, guid: 548a7f6b6abf7df449ce337d26c47358, type: 2}
+    TargetCurrency: {fileID: 0}
+    Operation: 0
+    Amount: 5

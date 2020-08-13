@@ -11,6 +11,9 @@ public class SwitchFieldUpgrades : MonoBehaviour
     public ClickerManager GoldManager;
     public Animator Animator;
 
+
+    [SerializeField]
+    private bool Activity = true;
     private int Count = 1;
 
     public void Start()

@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Trolley
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: d989d90e-513c-4753-8c85-9270502a5837
+    _serializedGuid: 8034f273-31a0-4b06-be4b-e77d0c06c6e1
   Unlocked: 0
   RequirementGroups: []
   Cost:
-    Currency: {fileID: 0}
-    Amount: 0
-  UpgradePerk: []
+    Currency: {fileID: 11400000, guid: a0eaf6f8e25cf47e78246e64e59f3eba, type: 2}
+    Amount: 3000
+  UpgradePerk: [{Type: 2, TargetBuilding: {fileID: 0}, TargetClickable: {fileID: 11400000,
+        guid: 548a7f6b6abf7df449ce337d26c47358, type: 2}, TargetCurrency: {fileID: 0},
+      Operation: 0, Amount: 1000}]

@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Trailer
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: 575e7b38-dce6-443c-ad1e-b91a5cb3d468
+    _serializedGuid: c7722690-003b-4145-99cc-35c99c5c3163
   Unlocked: 1
   RequirementGroups: []
   Cost:
     Currency: {fileID: 11400000, guid: a0eaf6f8e25cf47e78246e64e59f3eba, type: 2}
-    Amount: 3100
+    Amount: 10000
   YieldAmount:
     Currency: {fileID: 11400000, guid: a0eaf6f8e25cf47e78246e64e59f3eba, type: 2}
-    Amount: 21
-  BuildingType: 0
+    Amount: 40
+  BuildingType: 4

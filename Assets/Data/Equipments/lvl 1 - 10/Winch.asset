@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Winch
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: 99d2ae36-6c18-49d8-a24c-d97078e7a489
+    _serializedGuid: 9c434e42-6c44-409a-a5f2-22d45c116108
   Unlocked: 0
   RequirementGroups: []
   Cost:
-    Currency: {fileID: 0}
-    Amount: 0
-  UpgradePerk: []
+    Currency: {fileID: 11400000, guid: a0eaf6f8e25cf47e78246e64e59f3eba, type: 2}
+    Amount: 100000
+  UpgradePerk: [{Type: 2, TargetBuilding: {fileID: 0}, TargetClickable: {fileID: 11400000,
+        guid: 548a7f6b6abf7df449ce337d26c47358, type: 2}, TargetCurrency: {fileID: 0},
+      Operation: 0, Amount: 50000}]

@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 503aec7f6e89dd946b5200be8d304799, type: 3}
   m_Name: Building Progresive
   m_EditorClassIdentifier: 
-  CountBuildings: 100
+  CountBuildings: 50
   Miners:
   - {fileID: 11400000, guid: 334dafe90f2dd4b118bfccbe0dba4fda, type: 2}
   - {fileID: 11400000, guid: 44a3de177c5409449a586c00c24d8a82, type: 2}
-  - {fileID: 11400000, guid: 9edd4f942fdcad848ad166cb6eea6bca, type: 2}
+  - {fileID: 0}
   Carts:
   - {fileID: 11400000, guid: f24d7d7d04ffdb3409a09779aff7e9f0, type: 2}
   - {fileID: 11400000, guid: 380f75529b8d18243bd7ae086aa2830a, type: 2}

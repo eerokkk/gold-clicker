@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Sievung line
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: be54cecf-a74f-4a4b-b81e-883c7aacb365
+    _serializedGuid: 381caa07-efac-47ce-a025-2cbb2fbee367
   Unlocked: 1
   RequirementGroups: []
   Cost:
     Currency: {fileID: 11400000, guid: a0eaf6f8e25cf47e78246e64e59f3eba, type: 2}
-    Amount: 600
+    Amount: 500
   YieldAmount:
     Currency: {fileID: 11400000, guid: a0eaf6f8e25cf47e78246e64e59f3eba, type: 2}
-    Amount: 5
-  BuildingType: 0
+    Amount: 4
+  BuildingType: 2

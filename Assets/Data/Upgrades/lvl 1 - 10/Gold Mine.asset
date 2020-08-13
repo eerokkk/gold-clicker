@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Gold Mine
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: 9c9d32dd-b529-4126-9fca-88ad50d68dd6
+    _serializedGuid: 7358c0cb-abce-4594-bf6f-e588d01825f2
   Unlocked: 1
   RequirementGroups: []
   Cost:
     Currency: {fileID: 11400000, guid: a0eaf6f8e25cf47e78246e64e59f3eba, type: 2}
-    Amount: 5000
+    Amount: 40000
   YieldAmount:
     Currency: {fileID: 11400000, guid: a0eaf6f8e25cf47e78246e64e59f3eba, type: 2}
     Amount: 100
-  BuildingType: 0
+  BuildingType: 5

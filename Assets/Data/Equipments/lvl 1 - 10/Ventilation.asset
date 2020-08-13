@@ -13,20 +13,12 @@ MonoBehaviour:
   m_Name: Ventilation
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: 756e33f9-5620-4a20-a390-00011415d05f
+    _serializedGuid: eda726c3-d534-4829-bf3b-3359fefb141e
   Unlocked: 0
-  RequirementGroups:
-  - GroupOperand: 0
-    Requirements:
-    - RequirementType: 0
-      UnlockAmount:
-        Currency: {fileID: 0}
-        Amount: 0
-      UnlockBuilding:
-        Building: {fileID: 0}
-        Amount: 0
-      UnlockUpgrade: {fileID: 0}
+  RequirementGroups: []
   Cost:
-    Currency: {fileID: 0}
-    Amount: 0
-  UpgradePerk: []
+    Currency: {fileID: 11400000, guid: a0eaf6f8e25cf47e78246e64e59f3eba, type: 2}
+    Amount: 250
+  UpgradePerk: [{Type: 2, TargetBuilding: {fileID: 0}, TargetClickable: {fileID: 11400000,
+        guid: 548a7f6b6abf7df449ce337d26c47358, type: 2}, TargetCurrency: {fileID: 0},
+      Operation: 0, Amount: 125}]

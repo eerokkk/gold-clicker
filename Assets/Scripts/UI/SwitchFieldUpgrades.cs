@@ -1,6 +1,7 @@
 ﻿using TMPro;
 using uClicker;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SwitchFieldUpgrades : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class SwitchFieldUpgrades : MonoBehaviour
     public ClickerManager GoldManager;
     public Animator Animator;
 
+
+    [SerializeField]
+    private bool Activity = true;
     private int Count = 1;
 
     public void Start()
@@ -59,6 +63,8 @@ public void switchFieldUpgrades()
         }
 
         GoldManager.OnTick.Invoke();
+        GoldManager.OnBuyBuilding.Invoke();
+        GoldManager.OnBuyUpgrade.Invoke();
     }
 
     public void OnClickSettingsButton()

@@ -12,6 +12,8 @@ public class Binder : MonoBehaviour
     public TextMeshProUGUI Cost;
     public TextMeshProUGUI Description;
     public TextMeshProUGUI UpdateTypeCount;
+    public Sprite MinerIcon;
+    public GameObject PrefabIcon;
     private UnlockableComponent _clickerComponent;
     private Button _button;
 
@@ -40,6 +42,7 @@ public class Binder : MonoBehaviour
 
     public void Bind(Building availableBuilding)
     {
+        //pushSprite(availableBuilding);
         //Debug.Log(availableBuilding);
         _clickerComponent = availableBuilding;
         this.Name.text = availableBuilding.name;
@@ -61,6 +64,13 @@ public class Binder : MonoBehaviour
         _button = this.GetComponent<Button>();
         _clickerManager.OnTick.AddListener(IsActive);
         IsActive();
+    }
+
+    public void pushSprite(Building gavno)
+    {
+        var BuildingType = _clickerManager.State.BuildingCountType[gavno.BuildingType].ToString();
+        if (BuildingType == "Miners")
+            PrefabIcon.GetComponent<Image>().sprite = MinerIcon;
     }
 
     private void IsActive()

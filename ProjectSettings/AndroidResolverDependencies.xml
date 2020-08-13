@@ -40,7 +40,6 @@
     <package>com.google.android.exoplayer:exoplayer-core:2.8.4@aar</package>
     <package>com.google.android.exoplayer:exoplayer-hls:2.8.4@aar</package>
     <package>com.google.android.gms:play-services-ads:16.0.0</package>
-    <package>com.google.android.gms:play-services-ads:19.3.0</package>
     <package>com.google.android.gms:play-services-ads-identifier:16.0.0</package>
     <package>com.google.android.gms:play-services-base:16.0.1</package>
     <package>com.google.android.gms:play-services-basement:16.0.1</package>
@@ -53,7 +52,100 @@
     <package>com.yandex.android:mobileads:2.142@aar</package>
     <package>com.yandex.android:mobmetricalib:3.13.1</package>
   </packages>
-  <files />
+  <files>
+    <file>Assets/Plugins/Android/androidx.annotation.annotation-1.0.0.jar</file>
+    <file>Assets/Plugins/Android/androidx.arch.core.core-common-2.0.0.jar</file>
+    <file>Assets/Plugins/Android/androidx.arch.core.core-runtime-2.0.0.aar</file>
+    <file>Assets/Plugins/Android/androidx.asynclayoutinflater.asynclayoutinflater-1.0.0.aar</file>
+    <file>Assets/Plugins/Android/androidx.browser.browser-1.0.0.aar</file>
+    <file>Assets/Plugins/Android/androidx.collection.collection-1.0.0.jar</file>
+    <file>Assets/Plugins/Android/androidx.coordinatorlayout.coordinatorlayout-1.0.0.aar</file>
+    <file>Assets/Plugins/Android/androidx.core.core-1.0.0.aar</file>
+    <file>Assets/Plugins/Android/androidx.cursoradapter.cursoradapter-1.0.0.aar</file>
+    <file>Assets/Plugins/Android/androidx.customview.customview-1.0.0.aar</file>
+    <file>Assets/Plugins/Android/androidx.documentfile.documentfile-1.0.0.aar</file>
+    <file>Assets/Plugins/Android/androidx.drawerlayout.drawerlayout-1.0.0.aar</file>
+    <file>Assets/Plugins/Android/androidx.fragment.fragment-1.0.0.aar</file>
+    <file>Assets/Plugins/Android/androidx.interpolator.interpolator-1.0.0.aar</file>
+    <file>Assets/Plugins/Android/androidx.legacy.legacy-support-core-ui-1.0.0.aar</file>
+    <file>Assets/Plugins/Android/androidx.legacy.legacy-support-core-utils-1.0.0.aar</file>
+    <file>Assets/Plugins/Android/androidx.legacy.legacy-support-v4-1.0.0.aar</file>
+    <file>Assets/Plugins/Android/androidx.lifecycle.lifecycle-common-2.0.0.jar</file>
+    <file>Assets/Plugins/Android/androidx.lifecycle.lifecycle-livedata-2.0.0.aar</file>
+    <file>Assets/Plugins/Android/androidx.lifecycle.lifecycle-livedata-core-2.0.0.aar</file>
+    <file>Assets/Plugins/Android/androidx.lifecycle.lifecycle-runtime-2.0.0.aar</file>
+    <file>Assets/Plugins/Android/androidx.lifecycle.lifecycle-viewmodel-2.0.0.aar</file>
+    <file>Assets/Plugins/Android/androidx.loader.loader-1.0.0.aar</file>
+    <file>Assets/Plugins/Android/androidx.localbroadcastmanager.localbroadcastmanager-1.0.0.aar</file>
+    <file>Assets/Plugins/Android/androidx.media.media-1.0.0.aar</file>
+    <file>Assets/Plugins/Android/androidx.print.print-1.0.0.aar</file>
+    <file>Assets/Plugins/Android/androidx.recyclerview.recyclerview-1.0.0.aar</file>
+    <file>Assets/Plugins/Android/androidx.slidingpanelayout.slidingpanelayout-1.0.0.aar</file>
+    <file>Assets/Plugins/Android/androidx.swiperefreshlayout.swiperefreshlayout-1.0.0.aar</file>
+    <file>Assets/Plugins/Android/androidx.versionedparcelable.versionedparcelable-1.0.0.aar</file>
+    <file>Assets/Plugins/Android/androidx.viewpager.viewpager-1.0.0.aar</file>
+    <file>Assets/Plugins/Android/com.adcolony.sdk-4.1.4.aar</file>
+    <file>Assets/Plugins/Android/com.applovin.applovin-sdk-9.11.6.aar</file>
+    <file>Assets/Plugins/Android/com.appodeal.ads.sdk.core-2.6.5.aar</file>
+    <file>Assets/Plugins/Android/com.appodeal.ads.sdk.networks.a4g-2.6.5.2.aar</file>
+    <file>Assets/Plugins/Android/com.appodeal.ads.sdk.networks.adcolony-2.6.5.4.aar</file>
+    <file>Assets/Plugins/Android/com.appodeal.ads.sdk.networks.admob-2.6.5.2.aar</file>
+    <file>Assets/Plugins/Android/com.appodeal.ads.sdk.networks.amazon_ads-2.6.5.1.aar</file>
+    <file>Assets/Plugins/Android/com.appodeal.ads.sdk.networks.applovin-2.6.5.4.aar</file>
+    <file>Assets/Plugins/Android/com.appodeal.ads.sdk.networks.appodeal-2.6.5.1.aar</file>
+    <file>Assets/Plugins/Android/com.appodeal.ads.sdk.networks.appodealx-2.6.5.1.aar</file>
+    <file>Assets/Plugins/Android/com.appodeal.ads.sdk.networks.chartboost-2.6.5.1.aar</file>
+    <file>Assets/Plugins/Android/com.appodeal.ads.sdk.networks.facebook-2.6.5.3.aar</file>
+    <file>Assets/Plugins/Android/com.appodeal.ads.sdk.networks.inmobi-2.6.5.1.aar</file>
+    <file>Assets/Plugins/Android/com.appodeal.ads.sdk.networks.inner-active-2.6.5.1.aar</file>
+    <file>Assets/Plugins/Android/com.appodeal.ads.sdk.networks.ironsource-2.6.5.3.aar</file>
+    <file>Assets/Plugins/Android/com.appodeal.ads.sdk.networks.mraid-2.6.5.1.aar</file>
+    <file>Assets/Plugins/Android/com.appodeal.ads.sdk.networks.my_target-2.6.5.3.aar</file>
+    <file>Assets/Plugins/Android/com.appodeal.ads.sdk.networks.nast-2.6.5.1.aar</file>
+    <file>Assets/Plugins/Android/com.appodeal.ads.sdk.networks.ogury-2.6.5.3.aar</file>
+    <file>Assets/Plugins/Android/com.appodeal.ads.sdk.networks.smaato-2.6.5.2.aar</file>
+    <file>Assets/Plugins/Android/com.appodeal.ads.sdk.networks.startapp-2.6.5.5.aar</file>
+    <file>Assets/Plugins/Android/com.appodeal.ads.sdk.networks.tapjoy-2.6.5.2.aar</file>
+    <file>Assets/Plugins/Android/com.appodeal.ads.sdk.networks.unity_ads-2.6.5.3.aar</file>
+    <file>Assets/Plugins/Android/com.appodeal.ads.sdk.networks.vast-2.6.5.1.aar</file>
+    <file>Assets/Plugins/Android/com.appodeal.ads.sdk.networks.yandex-2.6.5.3.aar</file>
+    <file>Assets/Plugins/Android/com.appodeal.ads.sdk-2.6.5.0.aar</file>
+    <file>Assets/Plugins/Android/com.appodeal.protobuf-models-1.0.1.jar</file>
+    <file>Assets/Plugins/Android/com.explorestack.amazon.sdk-5.9.0.jar</file>
+    <file>Assets/Plugins/Android/com.explorestack.chartboost.sdk-7.5.0.jar</file>
+    <file>Assets/Plugins/Android/com.explorestack.iab-0.5.6.aar</file>
+    <file>Assets/Plugins/Android/com.explorestack.ogury.sdk-4.7.2.aar</file>
+    <file>Assets/Plugins/Android/com.explorestack.protobuf-java-1.0.0.jar</file>
+    <file>Assets/Plugins/Android/com.facebook.android.audience-network-sdk-5.7.1.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.exoplayer.exoplayer-core-2.8.4.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.exoplayer.exoplayer-hls-2.8.4.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-ads-16.0.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-ads-base-16.0.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-ads-identifier-16.0.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-ads-lite-16.0.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-base-16.0.1.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-basement-16.0.1.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-gass-16.0.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-location-16.0.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-places-placereport-16.0.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-tasks-16.0.1.aar</file>
+    <file>Assets/Plugins/Android/com.inmobi.monetization.inmobi-ads-7.3.0.jar</file>
+    <file>Assets/Plugins/Android/com.ironsource.sdk.mediationsdk-6.16.0.aar</file>
+    <file>Assets/Plugins/Android/com.my.target.mytarget-sdk-5.5.6.aar</file>
+    <file>Assets/Plugins/Android/com.smaato.android.sdk.module-core-21.3.1.aar</file>
+    <file>Assets/Plugins/Android/com.smaato.android.sdk.module-richmedia-21.3.1.aar</file>
+    <file>Assets/Plugins/Android/com.smaato.android.sdk.module-video-21.3.1.aar</file>
+    <file>Assets/Plugins/Android/com.smaato.android.sdk.smaato-sdk-21.3.1.aar</file>
+    <file>Assets/Plugins/Android/com.smaato.android.sdk.smaato-sdk-banner-21.3.1.aar</file>
+    <file>Assets/Plugins/Android/com.smaato.android.sdk.smaato-sdk-interstitial-21.3.1.aar</file>
+    <file>Assets/Plugins/Android/com.smaato.android.sdk.smaato-sdk-rewarded-ads-21.3.1.aar</file>
+    <file>Assets/Plugins/Android/com.squareup.picasso.picasso-2.5.2.jar</file>
+    <file>Assets/Plugins/Android/com.startapp.inapp-sdk-4.5.0.aar</file>
+    <file>Assets/Plugins/Android/com.tapjoy.tapjoy-android-sdk-12.4.2.aar</file>
+    <file>Assets/Plugins/Android/com.unity3d.ads.unity-ads-3.4.2.aar</file>
+    <file>Assets/Plugins/Android/com.yandex.android.mobileads-2.142.aar</file>
+    <file>Assets/Plugins/Android/com.yandex.android.mobmetricalib-3.13.1.aar</file>
+  </files>
   <settings>
     <setting name="androidAbis" value="armeabi-v7a" />
     <setting name="bundleId" value="com.GameCorporation228.ClickerGoldMiner" />

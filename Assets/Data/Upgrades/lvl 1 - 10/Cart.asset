@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Cart
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: 416a8824-6938-4fe3-b065-e133b34897d3
+    _serializedGuid: 10809ab5-b179-449f-85d6-8e21e5a22374
   Unlocked: 1
   RequirementGroups: []
   Cost:

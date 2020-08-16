@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Shovel
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: f089a5ff-cc50-4e9e-84c2-e5923eafc950
+    _serializedGuid: 360a5cf2-5687-41f4-81c2-75acd27595d6
   Unlocked: 1
   RequirementGroups: []
   Cost:

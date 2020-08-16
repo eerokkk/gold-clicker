@@ -16,12 +16,17 @@ public class AdsLoad : MonoBehaviour, IInterstitialAdListener
         Appodeal.initialize("c8b2720d60c73b49f31780a3aa1a46cdffd20c7c04e775c3",
             Appodeal.INTERSTITIAL | Appodeal.REWARDED_VIDEO,
             true);
+        Appodeal.setTesting(true);
+        
     }
 
     public void ShowInterstitialAds()
     {
         colbs.text = "";
-        Appodeal.show(Appodeal.INTERSTITIAL);
+        if (Appodeal.show(Appodeal.INTERSTITIAL))
+            colbs.text += $"{nameof(Appodeal.INTERSTITIAL)} loaded";
+        else
+            colbs.text += $"{nameof(Appodeal.INTERSTITIAL)} NOT loaded";
     }
 
     public void onInterstitialLoaded(bool isPrecache)

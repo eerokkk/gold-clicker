@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Equipment
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: d0e70b2f-b8f8-432d-8ba8-e4e77c124370
+    _serializedGuid: 2efdcbb4-c950-4d6b-8421-6d55e3ea09f8
   Unlocked: 0
   RequirementGroups: []
   Cost:

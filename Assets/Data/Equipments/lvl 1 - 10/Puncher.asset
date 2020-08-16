@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Puncher
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: 6e8293a7-a515-4e4a-88ab-fffcf59e329d
+    _serializedGuid: 7693e09c-989b-47b5-8ec9-b1783c20843a
   Unlocked: 1
   RequirementGroups: []
   Cost:

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: drill2
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: 62c681f9-aa5d-4af8-a348-f917252f82e3
+    _serializedGuid: 1524329c-8730-4ca7-a40a-d5a09d32a85a
   Unlocked: 0
   RequirementGroups:
   - GroupOperand: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Trolley
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: d989d90e-513c-4753-8c85-9270502a5837
+    _serializedGuid: 30e75022-2b2b-40a8-9125-9295629363c3
   Unlocked: 1
   RequirementGroups: []
   Cost:

@@ -18,7 +18,10 @@ public class RewardAds : MonoBehaviour, IRewardedVideoAdListener
     public void ShowRewardAds()
     {
         colbs.text = "";
-        Appodeal.show(Appodeal.REWARDED_VIDEO);
+        if (Appodeal.show(Appodeal.REWARDED_VIDEO))
+            colbs.text += $"{nameof(Appodeal.REWARDED_VIDEO)} loaded";
+        else
+            colbs.text += $"{nameof(Appodeal.REWARDED_VIDEO)} NOT loaded";
     }
 
     #region Rewarded Video callback handlers

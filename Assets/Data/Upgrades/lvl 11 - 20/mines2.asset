@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: mines2
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: ab9f411c-1ad0-4fe8-bf90-f14e68925f0d
+    _serializedGuid: 119e7052-6f1a-4670-89d5-33590e3b6f27
   Unlocked: 1
   RequirementGroups:
   - GroupOperand: 0

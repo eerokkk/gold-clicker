@@ -73,7 +73,6 @@ namespace uClicker.Editor
                 _clickerComponents = hash.Where(component => component != null).ToArray();
                 foreach (UnityEditor.Editor item in ActiveEditorTracker.sharedTracker.activeEditors)
                 {
-                    //TODO: Update active editors
                 }
             }
         }

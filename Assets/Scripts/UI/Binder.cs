@@ -38,7 +38,7 @@ public class Binder : MonoBehaviour
         this.Cost.text = LargeNumber.ToString(availableUpgrade.Cost.Amount);
         this.Description.text = GenerateUpgradeString(availableUpgrade.UpgradePerk);
         _button = this.GetComponent<Button>();
-        _clickerManager.OnTick.AddListener(IsActive);
+        _clickerManager.OnTick.AddListener(() => IsActive());
         IsActive();
     }
 
@@ -46,7 +46,6 @@ public class Binder : MonoBehaviour
     {
         _clickerComponent = availableBuilding;
         this.Name.text = availableBuilding.name;
-        this.Cost.text = LargeNumber.ToString(_clickerManager.BuildingCost(availableBuilding).Amount);
         this.Description.text = string.Format("+{0} {1}s per second", availableBuilding.YieldAmount.Amount,
             availableBuilding.YieldAmount.Currency.name);
         try
@@ -62,8 +61,9 @@ public class Binder : MonoBehaviour
         }
 
         _button = this.GetComponent<Button>();
-        _clickerManager.OnTick.AddListener(IsActive);
-        IsActive();
+        _clickerManager.OnTick.AddListener(() => IsActive(availableBuilding));
+        IsActive(availableBuilding);
+        
     }
 
     public void pushSpriteInBuilding(Building availableBuilding)
@@ -88,8 +88,11 @@ public class Binder : MonoBehaviour
         }
     }
 
-    private void IsActive()
+    private void IsActive(Building availableBuilding = null)
     {
+        if (availableBuilding != null)
+            this.Cost.text = LargeNumber.ToString(_clickerManager.BuildingCost(availableBuilding).Amount);
+
         _button.interactable = _clickerManager.CanBuy(_clickerComponent);
     }
 

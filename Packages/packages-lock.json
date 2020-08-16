@@ -140,13 +140,6 @@
         "com.unity.modules.ui": "1.0.0"
       }
     },
-    "com.wwweh.uclicker": {
-      "version": "https://github.com/philipcass/uClicker.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "17618ac6eba302a53c717852f00cabf2b45b895f"
-    },
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 0,

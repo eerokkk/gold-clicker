@@ -20,6 +20,7 @@ public class PopulateUpgrades : MonoBehaviour
             binder.Bind(availableUpgrade);
             go.SetActive(availableUpgrade.Unlocked);
             _objects.Add(binder);
+            binder.pushSpriteInUpgrade(availableUpgrade);
         }
 
         _clickerManager.OnTick.AddListener(OnTick);

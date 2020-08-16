@@ -13,12 +13,16 @@ MonoBehaviour:
   m_Name: Puncher
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: 0dd5b6e7-4ade-4c6e-b2af-5d61ddfe53b2
-  Unlocked: 0
+    _serializedGuid: 6e8293a7-a515-4e4a-88ab-fffcf59e329d
+  Unlocked: 1
   RequirementGroups: []
   Cost:
     Currency: {fileID: 11400000, guid: a0eaf6f8e25cf47e78246e64e59f3eba, type: 2}
     Amount: 10000
-  UpgradePerk: [{Type: 2, TargetBuilding: {fileID: 0}, TargetClickable: {fileID: 11400000,
-        guid: 548a7f6b6abf7df449ce337d26c47358, type: 2}, TargetCurrency: {fileID: 0},
-      Operation: 0, Amount: 5000}]
+  UpgradePerk:
+  - Type: 2
+    TargetBuilding: {fileID: 0}
+    TargetClickable: {fileID: 11400000, guid: 548a7f6b6abf7df449ce337d26c47358, type: 2}
+    TargetCurrency: {fileID: 0}
+    Operation: 0
+    Amount: 5000

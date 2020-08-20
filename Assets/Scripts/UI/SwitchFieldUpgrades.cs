@@ -1,10 +1,13 @@
-﻿using TMPro;
+﻿using System;
+using TMPro;
 using uClicker;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class SwitchFieldUpgrades : MonoBehaviour
 {
+    public TextMeshProUGUI IncomePerSecond;
     public GameObject FieldEquipment;
     public GameObject FieldUpgrades;
     public TextMeshProUGUI MultiplyText;
@@ -20,6 +23,12 @@ public class SwitchFieldUpgrades : MonoBehaviour
     {
         GoldManager.BuyMultiply = 1;
         GoldManager.BuyMax = false;
+        GoldManager.OnTick.AddListener(gavno);
+    }
+
+    private void gavno()
+    {
+        IncomePerSecond.text = LargeNumber.ToString(GoldManager.State.PerSecondAmount);
     }
 
     public void switchFieldEquipment()

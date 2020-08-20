@@ -322,6 +322,7 @@ MonoBehaviour:
   Miner: {fileID: 21300000, guid: 9380c31949061b04ba81262a476c4fa2, type: 3}
   Pick: {fileID: 21300000, guid: 29b2aafe16ce04c47a0e2f8811461bdd, type: 3}
   PrefabIcon: {fileID: 3767882252520480374}
+  _button: {fileID: 8593033776694385127}
 --- !u!1 &1413275240320800
 GameObject:
   m_ObjectHideFlags: 0

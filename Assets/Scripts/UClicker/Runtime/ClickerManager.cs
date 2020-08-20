@@ -88,7 +88,9 @@ namespace uClicker
             foreach (Currency currency in Config.Currencies)
             {
                 double amount = PerSecondAmount(currency);
-
+                if (currency.name == "Gold")
+                    State.PerSecondAmount = amount;
+                
                 updated = UpdateTotal(currency, amount);
             }
 

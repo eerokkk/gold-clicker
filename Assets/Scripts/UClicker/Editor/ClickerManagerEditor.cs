@@ -58,6 +58,8 @@ namespace Clicker.Editor
                     availableUpgrade.Unlocked = false;
                 }
 
+                manager.State.UraniumIncrease = 0d;
+
                 manager.State.CurrencyCurrentTotals.Clear();
                 manager.State.BuildingCountType.Clear();
                 manager.Config.AvailableBuildings = new Building[6];

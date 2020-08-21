@@ -72,7 +72,7 @@ namespace uClicker
             ApplyClickPerks(clickable, ref amount);
             ApplyCurrencyPerk(currency, ref amount);
 
-            amount += amount * State.PercentUranus * State.CurrencyCurrentTotals[Config.Currencies[1]];
+            amount += amount * (State.PercentUranus * State.CurrencyCurrentTotals[Config.Currencies[1]]);
             bool updated = UpdateTotal(currency, amount);
             UpdateUnlocks();
             if (updated)
@@ -380,7 +380,7 @@ namespace uClicker
                 {
                     return amount;
                 }
-                return amount+= amount * State.PercentUranus * State.CurrencyCurrentTotals[Config.Currencies[1]];
+                return amount+= amount * (State.PercentUranus * State.CurrencyCurrentTotals[Config.Currencies[1]]);
             }
 
             return 0;

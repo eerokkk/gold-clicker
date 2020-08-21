@@ -43,6 +43,16 @@ public class UpdateInfo : MonoBehaviour
         else if (Money != null) Money.text = "0";
     }
 
+    private void UpdateCurrentUraniumBonus()
+    {
+        if (Manager.State.CurrencyHistoricalTotals.ContainsKey(Manager.Config.Currencies[0]))
+            if (CurrentUraniumBonus != null)
+                CurrentUraniumBonus.text =
+                    $"You will get: {LargeNumber.ToString(Manager.State.UraniumIncrease)} uranium";
+        if (GetUranusCount != null)
+            GetUranusCount.text = $"Percent uranium bonus :{Manager.State.PercentUranus}%";
+    }
+    
     private void OnBuyUpgrade()
     {
         if (Upgrades != null)
@@ -58,13 +68,5 @@ public class UpdateInfo : MonoBehaviour
                 string.Format("{0} {1}", kvp.Key.name, kvp.Value)).ToArray());
     }
 
-    private void UpdateCurrentUraniumBonus()
-    {
-        if (Manager.State.CurrencyHistoricalTotals.ContainsKey(Manager.Config.Currencies[0]))
-            if (CurrentUraniumBonus != null)
-                CurrentUraniumBonus.text =
-                    $"You will get: {Manager.State.UraniumIncrease} uranium";
-        if (GetUranusCount != null)
-            GetUranusCount.text = $"Percent uranium bonus :{Manager.State.PercentUranus / 100f}%";
-    }
+
 }

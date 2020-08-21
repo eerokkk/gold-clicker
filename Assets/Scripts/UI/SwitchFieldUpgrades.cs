@@ -28,7 +28,7 @@ public class SwitchFieldUpgrades : MonoBehaviour
 
     private void gavno()
     {
-        IncomePerSecond.text = LargeNumber.ToString(GoldManager.State.PerSecondAmount);
+        IncomePerSecond.text = $"{LargeNumber.ToString(GoldManager.State.PerSecondAmount)} per second";
     }
 
     public void switchFieldEquipment()

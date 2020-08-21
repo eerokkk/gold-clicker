@@ -56,7 +56,7 @@ public class Binder : MonoBehaviour
         catch (System.Exception)
         {
             if(this.UpdateTypeCount != null)
-                this.UpdateTypeCount.text = "null";
+                this.UpdateTypeCount.text = "";
             //throw;
         }
 

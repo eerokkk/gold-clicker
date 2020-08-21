@@ -90,7 +90,8 @@ namespace uClicker
                 double amount = PerSecondAmount(currency);
                 if (currency.name == "Gold")
                     State.PerSecondAmount = amount;
-                
+                if (State.CurrencyHistoricalTotals.ContainsKey(Config.Currencies[0]))
+                    State.UraniumIncrease = Math.Round(State.CurrencyHistoricalTotals[Config.Currencies[0]] / 1000000d);
                 updated = UpdateTotal(currency, amount);
             }
 

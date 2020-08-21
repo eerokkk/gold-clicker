@@ -12,12 +12,13 @@ public class SwitchFieldUpgrades : MonoBehaviour
     public GameObject FieldUpgrades;
     public TextMeshProUGUI MultiplyText;
     public ClickerManager GoldManager;
-    public Animator Animator;
+    public Animator MainAnimator;
 
 
     [SerializeField]
     private bool Activity = true;
     private int Count = 1;
+    private bool AnimationCheck = true;
 
     public void Start()
     {
@@ -78,14 +79,38 @@ public void switchFieldUpgrades()
 
     public void OnClickSettingsButton()
     {
-        Animator.SetBool("IsOpen", true);
-
+        MainAnimator.SetBool("isSettingsButtonPush", true);
+        MainAnimator.SetBool("NewState", false);
+        AnimationCheck = true;
     }
 
     public void OnClickBackButtonIsSettingsPanel()
     {
-        Animator.SetBool("IsOpen", false);
-
+        switch (AnimationCheck)
+        {
+            case true:
+                MainAnimator.SetBool("isSettingsButtonPush", false);
+                MainAnimator.SetBool("NewState", true);
+                AnimationCheck = false;
+                break;
+            case false:
+                MainAnimator.SetBool("isResetButtonPush", false);
+                MainAnimator.SetBool("NewState", true);
+                AnimationCheck = true;
+                break;
+        }
     }
-}
 
+    public void OnClickResetButton()
+    {
+        MainAnimator.SetBool("isResetButtonPush", true);
+        MainAnimator.SetBool("NewState", false);
+        AnimationCheck = false;
+    }
+
+    //public void OnClickBackResetButton()
+    //{
+    //    MainAnimator.SetBool("isResetButtonPush", false);
+    //    MainAnimator.SetBool("NewState", true);
+    //}
+}

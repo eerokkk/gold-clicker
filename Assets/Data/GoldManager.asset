@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GoldManager
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: 1ec72715-0904-45b1-8ddd-21a412e8e536
+    _serializedGuid: 6141ad06-4ad0-4956-9513-735f837c3654
   SaveSettings:
     SaveType: 0
     SaveName: save
@@ -44,12 +44,23 @@ MonoBehaviour:
     BuildingCostIncrease: 0.15
   State:
     PercentUranus: 0
-    _earnedBuildings: []
-    _earnedBuildingsCount: 
+    PerSecondAmount: 0.10000000149011612
+    _earnedBuildings:
+    - _serializedGuid: 78fab584-e63a-492c-8a98-a9b6ec732d55
+    _earnedBuildingsCount: 01000000
     _earnedUpgrades: []
-    _currencies: []
-    _currencyCurrentTotals: []
-    _currencyHistoricalTotals: []
+    _currencies:
+    - _serializedGuid: 2afadaf9-2363-44c4-8c75-f75d3fa140d6
+    - _serializedGuid: b644fc7e-73d9-479e-b252-12032618977b
+    - _serializedGuid: 6c28ced6-9ab0-4701-bb0b-cf72e2b65a45
+    _currencyCurrentTotals:
+    - 3999985.200000003
+    - 0
+    - 0
+    _currencyHistoricalTotals:
+    - 4000000.200000003
+    - 0
+    - 0
   Progresive: {fileID: 11400000, guid: c3a0bf358d0109d42a76db9f37e01166, type: 2}
   BuyMultiply: 100
   BuyMax: 0

@@ -13,8 +13,8 @@ namespace uClicker
         [NonSerialized] public Dictionary<Currency, double> CurrencyCurrentTotals = new Dictionary<Currency, double>();
         [NonSerialized] public Dictionary<Currency, double> CurrencyHistoricalTotals = new Dictionary<Currency, double>();
         public Dictionary<BuildingType, int> BuildingCountType = new Dictionary<BuildingType, int>();
-        [SerializeField] public double PercentUranus;
-        public Dictionary<Building, int> BuildingMaxBuy = new Dictionary<Building, int>();
+        public double PercentUranus;
+        [NonSerialized]public Dictionary<Building, int> BuildingMaxBuy = new Dictionary<Building, int>();
         public double PerSecondAmount;
 
         [SerializeField] private List<GUIDContainer> _earnedBuildings = new List<GUIDContainer>();

@@ -51,7 +51,7 @@ MonoBehaviour:
     _currencyCurrentTotals: []
     _currencyHistoricalTotals: []
   Progresive: {fileID: 11400000, guid: c3a0bf358d0109d42a76db9f37e01166, type: 2}
-  BuyMultiply: 1
+  BuyMultiply: 100
   BuyMax: 0
   OnTick:
     m_PersistentCalls:

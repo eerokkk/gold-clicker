@@ -23,9 +23,10 @@ public class ResetProgress : MonoBehaviour
             availableUpgrade.Unlocked = false;
         }
 
-        var sumUran = Math.Round(manager.State.CurrencyCurrentTotals[manager.Config.Currencies[0]] / 1000000d);
+        var sumUran = Math.Round(manager.State.CurrencyHistoricalTotals[manager.Config.Currencies[0]] / 1000000d);
         manager.State.CurrencyCurrentTotals[manager.Config.Currencies[1]] += sumUran;
-        manager.State.CurrencyCurrentTotals[manager.Config.Currencies[0]] = 0;
+        manager.State.CurrencyCurrentTotals[manager.Config.Currencies[0]] = 0d;
+        manager.State.CurrencyHistoricalTotals[manager.Config.Currencies[0]] = 0d;
         manager.State.BuildingCountType.Clear();
 
         manager.Config.AvailableBuildings[0] = manager.Progresive.Miners[0];

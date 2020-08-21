@@ -554,6 +554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a004a8570027354e937122498f79cb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IncomePerSecond: {fileID: 1757596966}
   FieldEquipment: {fileID: 1113098330}
   FieldUpgrades: {fileID: 330074109}
   MultiplyText: {fileID: 2064691751}

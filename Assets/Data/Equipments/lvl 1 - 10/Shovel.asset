@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Shovel
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: 360a5cf2-5687-41f4-81c2-75acd27595d6
+    _serializedGuid: cf35fa14-69f3-4920-b34e-0afc2121675a
   Unlocked: 1
   RequirementGroups: []
   Cost:
@@ -26,3 +26,4 @@ MonoBehaviour:
     TargetCurrency: {fileID: 0}
     Operation: 0
     Amount: 25000
+    PerCent: 0

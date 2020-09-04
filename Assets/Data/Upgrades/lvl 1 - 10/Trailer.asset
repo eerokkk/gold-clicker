@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Trailer
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: 0bd47e22-566e-4d97-b200-311db776d01d
+    _serializedGuid: 3ac55593-9bc0-4630-b4de-945ba5f253c3
   Unlocked: 1
   RequirementGroups: []
   Cost:

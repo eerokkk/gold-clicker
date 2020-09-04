@@ -27,6 +27,7 @@ namespace uClicker
         public Currency TargetCurrency;
         public Operation Operation;
         public float Amount;
+        public float PerCent;
     }
 
     public enum Operation

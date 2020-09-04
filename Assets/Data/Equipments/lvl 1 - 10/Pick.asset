@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Pick
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: 11f97bc2-945c-44db-accc-61b0f7e80cab
+    _serializedGuid: 313c9248-0d05-4694-8095-1ad052e00ca5
   Unlocked: 1
   RequirementGroups: []
   Cost:
@@ -26,3 +26,4 @@ MonoBehaviour:
     TargetCurrency: {fileID: 0}
     Operation: 0
     Amount: 5
+    PerCent: 0

@@ -38,6 +38,11 @@ namespace uClicker.Editor
             groupPosition.height = EditorGUI.GetPropertyHeight(reqObject);
             EditorGUI.PropertyField(groupPosition, reqObject, true);
             groupPosition.y += groupPosition.height + EditorGUIUtility.standardVerticalSpacing;
+
+            reqObject = property.FindPropertyRelative("PerCent");
+            groupPosition.height = EditorGUI.GetPropertyHeight(reqObject);
+            EditorGUI.PropertyField(groupPosition, reqObject, true);
+            groupPosition.y += groupPosition.height + EditorGUIUtility.standardVerticalSpacing;
         }
 
         private static SerializedProperty GetActiveRequirement(SerializedProperty requirement)
@@ -66,7 +71,7 @@ namespace uClicker.Editor
 
         public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
         {
-            return (base.GetPropertyHeight(property, label) + EditorGUIUtility.standardVerticalSpacing) * 4;
+            return (base.GetPropertyHeight(property, label) + EditorGUIUtility.standardVerticalSpacing) * 5;
         }
     }
 }

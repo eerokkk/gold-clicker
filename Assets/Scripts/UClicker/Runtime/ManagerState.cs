@@ -16,7 +16,7 @@ namespace uClicker
         public double PercentUranus;
         [NonSerialized]public Dictionary<Building, int> BuildingMaxBuy = new Dictionary<Building, int>();
         public double PerSecondAmount;
-        public double UraniumIncrease;
+        [SerializeField] public double UraniumIncrease = 1;
 
         [SerializeField] private List<GUIDContainer> _earnedBuildings = new List<GUIDContainer>();
         [SerializeField] private List<int> _earnedBuildingsCount = new List<int>();

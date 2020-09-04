@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Trolley
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: 30e75022-2b2b-40a8-9125-9295629363c3
+    _serializedGuid: 8f932afd-6651-4317-9d88-82afef403b68
   Unlocked: 1
   RequirementGroups: []
   Cost:
@@ -26,3 +26,4 @@ MonoBehaviour:
     TargetCurrency: {fileID: 0}
     Operation: 0
     Amount: 1000
+    PerCent: 0

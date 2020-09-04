@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Lighting
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: e0999f27-4a60-44a5-b315-87bbf6456d16
+    _serializedGuid: aa14c7ae-860f-4d61-bad9-7d32a50f4b6b
   Unlocked: 1
   RequirementGroups: []
   Cost:
@@ -26,3 +26,4 @@ MonoBehaviour:
     TargetCurrency: {fileID: 11400000, guid: a0eaf6f8e25cf47e78246e64e59f3eba, type: 2}
     Operation: 0
     Amount: 25
+    PerCent: 0

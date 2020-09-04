@@ -66,13 +66,18 @@ namespace uClicker
 
         public void Click(Clickable clickable)
         {
+            double percent = State.PercentUranus;
             double amount = clickable.Amount;
             Currency currency = clickable.Currency;
 
             ApplyClickPerks(clickable, ref amount);
-            ApplyCurrencyPerk(currency, ref amount);
+            ApplyCurrencyPerk(currency, ref amount, ref percent);
 
-            amount += amount * (State.PercentUranus * State.CurrencyCurrentTotals[Config.Currencies[1]]);
+            //Debug.Log($"percent ==============={percent}");
+            //Debug.Log($"State.CurrencyCurrentTotals[Config.Currencies[1]] ==============={State.CurrencyCurrentTotals[Config.Currencies[1]]}");
+            //Debug.Log($"amount * (percent ==============={amount}");
+
+            amount += amount * (percent * State.CurrencyCurrentTotals[Config.Currencies[1]]);
             bool updated = UpdateTotal(currency, amount);
             UpdateUnlocks();
             if (updated)
@@ -262,6 +267,7 @@ namespace uClicker
                             State.BuildingMaxBuy[building] = i - 1;
                         }
 
+                        //Debug.Log($"building ====  { building},  i ======{i}" );
                         break;
                     }
 
@@ -332,7 +338,7 @@ namespace uClicker
             //Debug.Log(costCurrency);
             if (State.CurrencyCurrentTotals[costCurrency] < cost)
             {
-                Debug.Log($"FALSE , State.CurrencyCurrentTotals[costCurrency] ===== {State.CurrencyCurrentTotals[costCurrency]},   cost ================{cost}");
+               // Debug.Log($"FALSE , State.CurrencyCurrentTotals[costCurrency] ===== {State.CurrencyCurrentTotals[costCurrency]},   cost ================{cost}");
                 return false;
             }
 
@@ -352,9 +358,10 @@ namespace uClicker
 
             if (total != 0 && amount < 0)
             {
-                Debug.Log($"total = {total}");
-                Debug.Log($"amount = {amount}");
+                //Debug.Log($"total = {total}");
+                //Debug.Log($"amount = {amount}");
             }
+           //Debug.Log($"Вычитаем total ==== {total} -------------- amount = {amount} ======================= {total + amount}");
             total += amount;
             State.CurrencyCurrentTotals[currency] = total;
 
@@ -373,14 +380,15 @@ namespace uClicker
             if (currency.name == "Gold")
             {
                 double amount = 0;
+                double percent = State.PercentUranus;
 
                 ApplyBuildingPerks(currency, ref amount);
-                ApplyCurrencyPerk(currency, ref amount);
+                ApplyCurrencyPerk(currency, ref amount, ref percent);
                 if (State.CurrencyCurrentTotals.Count < 1)
                 {
                     return amount;
                 }
-                return amount+= amount * (State.PercentUranus * State.CurrencyCurrentTotals[Config.Currencies[1]]);
+                return amount+= amount * (percent * State.CurrencyCurrentTotals[Config.Currencies[1]]);
             }
 
             return 0;
@@ -526,7 +534,7 @@ namespace uClicker
             }
         }
 
-        private void ApplyCurrencyPerk(Currency currency, ref double amount)
+        private void ApplyCurrencyPerk(Currency currency, ref double amount, ref double percent)
         {
             foreach (Upgrade upgrade in State.EarnedUpgrades)
             {
@@ -534,12 +542,15 @@ namespace uClicker
                 {
                     if (upgradePerk.TargetCurrency != currency)
                     {
+                        Debug.Log($"upgradePerk.TargetCurrency === {upgradePerk.TargetCurrency}  and currency ====== {currency}");
                         continue;
                     }
 
                     switch (upgradePerk.Operation)
                     {
                         case Operation.Add:
+                            percent += upgradePerk.PerCent;
+                            Debug.Log( $"Прибавляю процент к урану ============================ {percent}");
                             amount += upgradePerk.Amount;
                             break;
                         case Operation.Multiply:

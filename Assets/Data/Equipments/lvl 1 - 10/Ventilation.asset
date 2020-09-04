@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ventilation
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: f5e73f75-9a71-42d7-852f-d43c641bcfbf
+    _serializedGuid: 5ebe2294-01d1-463b-b39c-8322ebd0f4ba
   Unlocked: 1
   RequirementGroups: []
   Cost:
@@ -26,3 +26,4 @@ MonoBehaviour:
     TargetCurrency: {fileID: 0}
     Operation: 0
     Amount: 125
+    PerCent: 0

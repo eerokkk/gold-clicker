@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Winch
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: fb65d106-9dac-4836-a338-ec578f94aa04
+    _serializedGuid: c529c568-8c0d-4343-b3c1-ce90b78e8696
   Unlocked: 1
   RequirementGroups: []
   Cost:
@@ -26,3 +26,4 @@ MonoBehaviour:
     TargetCurrency: {fileID: 0}
     Operation: 0
     Amount: 50000
+    PerCent: 0

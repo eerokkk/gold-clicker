@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Rails
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: 6a120ee4-5a35-4b1d-aab6-3449a064a100
+    _serializedGuid: 3d061fce-01bb-40b2-89ba-b0321fda053e
   Unlocked: 1
   RequirementGroups: []
   Cost:
@@ -26,3 +26,4 @@ MonoBehaviour:
     TargetCurrency: {fileID: 0}
     Operation: 0
     Amount: 500
+    PerCent: 0

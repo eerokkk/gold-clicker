@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Puncher
   m_EditorClassIdentifier: 
   GUIDContainer:
-    _serializedGuid: 7693e09c-989b-47b5-8ec9-b1783c20843a
+    _serializedGuid: 23a8c85a-7754-487c-86c1-d32a48a8be3b
   Unlocked: 1
   RequirementGroups: []
   Cost:
@@ -26,3 +26,4 @@ MonoBehaviour:
     TargetCurrency: {fileID: 0}
     Operation: 0
     Amount: 5000
+    PerCent: 0
